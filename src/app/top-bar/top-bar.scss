@@ -1,0 +1,31 @@
+header {
+  top: 0;
+  z-index: 100;
+  position: sticky;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  box-shadow: 0 6px 13px -7px rgb(0 0 0 / 20%);
+  gap: 30px;
+  float: right;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  padding-right: 30px;
+
+  #logo {
+    cursor: pointer;
+    user-select: none;
+    font-size: 28px;
+    padding-left: 30px;
+  }
+
+  #logo_ci {
+    width: 35px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}

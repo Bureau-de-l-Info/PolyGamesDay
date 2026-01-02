@@ -1,0 +1,5 @@
+@for (game of games; track game.name) {
+<li>{{ game.name }}</li>
+} @empty {
+<li>There are no games.</li>
+}
