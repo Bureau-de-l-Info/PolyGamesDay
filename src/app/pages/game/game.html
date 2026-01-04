@@ -1,5 +1,19 @@
-@for (game of games; track game.name) {
-<li>{{ game.name }}</li>
-} @empty {
-<li>There are no games.</li>
-}
+<div class="video-container">
+  <video muted="" loop="" autoplay="" playsinline="">
+    <source class="video-source"
+            src="{{getMedia('video')}}"
+            type="video/webm">
+  </video>
+  <div class="game-description-container">
+    <img id="overview-league_of_legends-title" class="image-title" alt="Logo de League of Legends"
+         ngSrc="{{getMedia('logo')}}" fill>
+  </div>
+</div>
+
+<div class="rules">
+  <h1>Déroulement des tournois</h1>
+  @for (game of getGames().sections; track game.title) {
+    <h2>{{ game.title }}</h2>
+    <span>{{ game.content }}</span>
+  }
+</div>

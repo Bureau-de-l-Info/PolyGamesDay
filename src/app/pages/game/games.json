@@ -1,0 +1,82 @@
+{
+  "$schema": "./games.schema.json",
+  "games": [
+    {
+      "name": "League of Legends",
+      "sections": [
+        {
+          "title": "Introduction",
+          "content": "Les tournois Valorant et League of Legends des Poly Games Day se déroulent en deux phases distinctes. Une première **phase de qualification en ligne**, puis une journée de **tournoi en présentiel**.\nLes règles du [règlement général](https://pgd.ci-polytech-nancy.fr/reglement) s'appliquent au tournoi.\nUn non-respect du règlement ou au déroulement du tournoi pourra entraîner une disqualification de l'équipe."
+        },
+        {
+          "title": "Phase de poule",
+          "content": "La phase qualificative se déroulera le **samedi 8 mars** en distanciel. Les matchs seront annoncés dans un canal [Discord](https://discord.gg/S8A2F7nnSv) dédié. Les matchs se déroulent sous forme de [**round robin**](https://fr.wikipedia.org/wiki/Tournoi_toutes_rondes) en **BO1**.\nLes quatres meilleures équipes à l'issue de cette phase préliminaire se qualifient pour le tournoi en présentiel."
+        },
+        {
+          "title": "Phase finale",
+          "content": "La phase finale se déroulera le **samedi 15 mars** en présentiel. Les matchs se dérouleront sous forme **d'arbre de tournoi** présenté comme ci-dessous : Les demi-finales se joueront en **BO3** et la finale en **BO5**. L'équipe gagnant la finale remporte le prix."
+        }
+      ],
+      "media": [
+        {
+          "type": "logo",
+          "path": "/static/images/overview_pages/league-of-legends-logo.png"
+        },
+        {
+          "type": "video",
+          "path": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ab3e227121c53aacab0c9b9f7a48adbc65db520.webm"
+        }
+      ]
+    },
+    {
+      "name": "Valorant",
+      "sections": [
+        {
+          "title": "Introduction",
+          "content": "Les tournois Valorant et League of Legends des Poly Games Day se déroulent en deux phases distinctes. Une première **phase de qualification** en ligne, puis une journée de **tournoi en présentiel**.\nLes règles du [règlement général](https://pgd.ci-polytech-nancy.fr/reglement) s'appliquent au tournoi.\nUn non-respect du règlement ou au déroulement du tournoi pourra entraîner une disqualification de l'équipe."
+        },
+        {
+          "title": "Phase de poule",
+          "content": "La phase qualificative se déroulera le **samedi 8 mars** en distanciel. Les matchs seront annoncés dans un canal [Discord](https://discord.gg/S8A2F7nnSv) dédié. Les matchs se déroulent sous forme de [**round robin**](https://fr.wikipedia.org/wiki/Tournoi_toutes_rondes) en **BO1**.\nLes quatres meilleures équipes à l'issue de cette phase préliminaire se qualifient pour le tournoi en présentiel."
+        },
+        {
+          "title": "Phase finale",
+          "content": "La phase finale se déroulera le **samedi 15 mars** en présentiel. Les matchs se dérouleront sous forme **d'arbre de tournoi** présenté comme ci-dessous : Les demi-finales se joueront en **BO3** et la finale en **BO5**. L'équipe gagnant la finale remporte le prix."
+        }
+      ],
+      "media": [
+        {
+          "type": "logo",
+          "path": "/static/images/overview_pages/valorant-logo.svg"
+        },
+        {
+          "type": "video",
+          "path": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/409ab2fc369ba5e1fe50bac10c6676d7d1365a9f.mp4"
+        }
+      ]
+    },
+    {
+      "name": "Brawl Stars",
+      "sections": [
+        {
+          "title": "Introduction",
+          "content": "Le tournoi Brawl Stars des Poly Games Day se déroule sous forme de **tournoi en présentiel**.\nLes règles du [règlement général](https://pgd.ci-polytech-nancy.fr/reglement) s'appliquent au tournoi.\nUn non-respect du règlement ou au déroulement du tournoi pourra entraîner une disqualification de l'équipe."
+        },
+        {
+          "title": "Phase finale",
+          "content": " La phase finale se déroulera le **samedi 15 mars** en présentiel. Les matchs se dérouleront sous forme **d'arbre de tournoi** présenté comme ci-dessous :\nLes matchs se déroulent en **BO3**, chaque match de la série se déroulant dans un mode de jeu différent parmi les suivants: BrawlBall, Razzia de gemmes, Hors-Jeu, Zone réservée et Prime. Les demi-finales et la finale se déroulent en **BO5**. L'équipe gagnant la finale remporte le prix. "
+        }
+      ],
+      "media": [
+        {
+          "type": "logo",
+          "path": "/static/images/overview_pages/brawl-stars-logo.png"
+        },
+        {
+          "type": "video",
+          "path": "https://supercell.com/images/1a5b69311180a4a1c374e10556941f05/1681/hero_bg_brawlstars.a385872a.webp"
+        }
+      ]
+    }
+  ]
+}
