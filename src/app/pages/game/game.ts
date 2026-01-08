@@ -1,9 +1,10 @@
 import {Component, inject} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {NgOptimizedImage} from '@angular/common';
+import {MarkdownService} from 'ngx-markdown';
 
 import games from './games.json';
 import {GamesType, GameType} from './games';
-import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-game',
@@ -14,6 +15,8 @@ import {NgOptimizedImage} from '@angular/common';
   styleUrl: './game.scss',
 })
 export class Game {
+  constructor(public markdownService: MarkdownService) { }
+
   public route = inject(ActivatedRoute);
   private games = (games as GamesType).games;
 

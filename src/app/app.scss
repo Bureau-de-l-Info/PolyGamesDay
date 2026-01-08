@@ -77,10 +77,10 @@
 section {
   scroll-margin-top: 65px;
 
-  &:nth-child(2n) {
+  // &:nth-child(2n) {
     background-color: var(--purple);
     color: var(--on-pink);
-  }
+  // }
 
   & h2 {
     font-size: 32px;
