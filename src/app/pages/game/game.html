@@ -12,8 +12,5 @@
 
 <div class="rules">
   <h1>Déroulement des tournois</h1>
-  @for (game of getGames().sections; track game.title) {
-    <h2>{{ game.title }}</h2>
-    {{markdownService.parse(game.content)}}
-  }
+  <markdown [src]="`/md/${getGameName()}.md`"></markdown>
 </div>

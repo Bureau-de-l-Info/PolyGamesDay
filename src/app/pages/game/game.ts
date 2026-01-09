@@ -1,24 +1,26 @@
-import {Component, inject} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {NgOptimizedImage} from '@angular/common';
-import {MarkdownService} from 'ngx-markdown';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
+import { MarkdownComponent, MarkdownService } from 'ngx-markdown';
 
 import games from './games.json';
-import {GamesType, GameType} from './games';
+import { GamesType, GameType } from './games';
 
 @Component({
   selector: 'app-game',
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    MarkdownComponent
   ],
   templateUrl: './game.html',
   styleUrl: './game.scss',
+  providers: [MarkdownService]
 })
 export class Game {
-  constructor(public markdownService: MarkdownService) { }
-
   public route = inject(ActivatedRoute);
   private games = (games as GamesType).games;
+
+  // constructor(public markdownService: MarkdownService) {}
 
   public getGameName() {
     return String(this.route.snapshot.url.at(-1));
@@ -26,6 +28,8 @@ export class Game {
 
   public getGames(): GameType {
     const game = this.getGameName();
+
+    this.log();
 
     if (game === "league-of-legends") return <GameType>this.games.at(0);
     if (game === "valorant") return <GameType>this.games.at(1);
@@ -36,5 +40,9 @@ export class Game {
 
   public getMedia(type: string) {
     return this.getGames()?.media.find((el: { type: string; }) => el.type == 'video')?.path;
+  }
+
+  public log() {
+    console.log('./md/' + this.getGameName() + '.md');
   }
 }
