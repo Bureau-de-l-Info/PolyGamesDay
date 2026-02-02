@@ -3,7 +3,6 @@
 @import "./styles/_button.css";
 @import "./styles/_video.css";
 
-
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -20,18 +19,18 @@ body {
   top: 0;
 
   &::-webkit-scrollbar {
-    width: 7px
+    width: 7px;
   }
 
   &::-webkit-scrollbar-track {
-    background-color: white
+    background-color: white;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: var(--blue);
 
     &:hover {
-      background-color: -var(-screen-red)
+      background-color: var(--red);
     }
   }
 
@@ -39,7 +38,7 @@ body {
     display: inline-block;
     color: black;
     text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: all 0.2s ease;
 
     &:hover {
       color: var(--blue);
@@ -110,7 +109,7 @@ header {
   height: 100vh;
   min-height: 600px;
   width: 100%;
-  background: url('images/fond.webp') fixed center no-repeat;
+  background: url("images/fond.webp") fixed center no-repeat;
   background-size: cover;
   justify-content: center;
 
@@ -132,7 +131,8 @@ header {
       max-width: 12vw;
       min-width: 100px;
 
-      filter: drop-shadow(5px 5px 5px var(--blue)) drop-shadow(-5px -5px 5px var(--red));
+      filter: drop-shadow(5px 5px 5px var(--blue))
+        drop-shadow(-5px -5px 5px var(--red));
     }
 
     & #logo-large-screen {
@@ -157,7 +157,9 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  transition: all 0.2s ease, transform 0.1s ease;
+  transition:
+    all 0.2s ease,
+    transform 0.1s ease;
 
   width: 100%;
   max-width: 500px;
@@ -182,7 +184,6 @@ section {
   margin-bottom: 30px;
 
   scroll-margin-top: 65px;
-
 
   &:nth-child(2n) {
     background-color: var(--purple);
@@ -209,7 +210,6 @@ section {
 
     &.on_dark::after {
       background-color: white;
-
     }
   }
 
@@ -391,11 +391,23 @@ section {
   }
 
   & .tab_1-2 {
-    background: repeating-linear-gradient(90deg, #8289eb, #8289eb 50%, #dd5858 50%, #dd5858 100%);
+    background: repeating-linear-gradient(
+      90deg,
+      #8289eb,
+      #8289eb 50%,
+      #dd5858 50%,
+      #dd5858 100%
+    );
   }
 
   & .tab_3_empty {
-    background: repeating-linear-gradient(45deg, #92d889, #92d889 5px, #71a56a 5px, #71a56a 10px);
+    background: repeating-linear-gradient(
+      45deg,
+      #92d889,
+      #92d889 5px,
+      #71a56a 5px,
+      #71a56a 10px
+    );
   }
 
   & .break {
@@ -444,7 +456,7 @@ section {
     }
   }
 
-  & #culture-actions>img {
+  & #culture-actions > img {
     padding: 15px;
   }
 }
@@ -467,10 +479,10 @@ section {
   }
 }
 
-section#staff, #footer {
+section#staff,
+#footer {
   margin-bottom: 0;
 }
-
 
 #footer {
   height: 60px;
@@ -479,7 +491,6 @@ section#staff, #footer {
   background-color: white;
   box-shadow: 0 -6px 13px -7px rgb(0 0 0 / 20%);
 }
-
 
 #scrollTopBtn {
   color: white;
@@ -492,7 +503,10 @@ section#staff, #footer {
   border-radius: 50%;
   font-size: 17px;
   background-color: var(--blue);
-  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
 
   &:hover {
     background-color: var(--red);
@@ -503,7 +517,6 @@ section#staff, #footer {
     -webkit-transform: scale(0.9);
   }
 }
-
 
 #mentions {
   background-color: white;
@@ -521,14 +534,13 @@ section#staff, #footer {
   }
 
   & .container {
-    padding: 0
+    padding: 0;
   }
 
   & h2 {
-    padding-top: 50px
+    padding-top: 50px;
   }
 }
-
 
 #error {
   background-color: white;
@@ -628,7 +640,8 @@ section#staff, #footer {
 .link {
   /* TODO: move to general file --> not specific to a component */
   color: var(--blue);
-  background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 2px no-repeat;
+  background: linear-gradient(currentColor 0 0) bottom left/
+    var(--underline-width, 0%) 2px no-repeat;
   display: inline-block;
   padding-bottom: 0.2em;
   text-decoration: none;
@@ -756,7 +769,6 @@ section#staff, #footer {
   .hide-small {
     display: none;
   }
-
 
   .dropdown {
     position: relative;
