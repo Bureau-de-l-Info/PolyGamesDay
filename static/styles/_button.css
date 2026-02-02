@@ -2,25 +2,48 @@
 
 .button {
   padding: 15px 30px;
-  color: var(--md-light-color-on-primary);
-  background-color: var(--md-light-color-primary);
+  background-color: var(--blue);
+  color: var(--on-blue);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 
   border-radius: 10px;
 
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-weight: bold;
 
   transition: all 0.2s ease-in-out;
 
   &:hover {
     box-shadow: 0 2px 4px grey;
-    color: var(--md-light-color-on-primary);
-    filter: brightness(92%);
+    color: var(--on-red);
+    background-color: var(--red);
+  }
+
+  &.w150 {
+    min-width: 150px;
+  }
+  &.w200 {
+    min-width: 200px;
+  }
+  &.w250 {
+    min-width: 250px;
+  }
+  &.w350 {
+    min-width: 350px;
+  }
+  &.w400 {
+    min-width: 400px;
+  }
+  &.w450 {
+    min-width: 450px;
   }
 }
 
 .button-icon {
-  color: var(--md-light-color-on-primary-container);
-  background-color: var(--md-light-color-primary-container);
+  color: var(--on-red);
+  background-color: var(--red);
   width: var(--button-icon-size);
   height: var(--button-icon-size);
 
