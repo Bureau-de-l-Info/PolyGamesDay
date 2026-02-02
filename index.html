@@ -19,7 +19,7 @@
     content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
   <meta property="og:url" content="https://pgd.ci-polytech-nancy.fr/" />
   <meta property="og:image" content="https://pgd.ci-polytech-nancy.fr/static/images/logo.webp" />
-  <meta content="#e22f8a" data-react-helmet="true" name="theme-color" />
+  <meta content="#cc3e57" data-react-helmet="true" name="theme-color" />
 
   <title>Poly Games Day</title>
 
@@ -29,7 +29,7 @@
 </head>
 
 <body>
-  <!-- Header large -->
+  <!-- #region Header large -->
   <header class="hide-small">
     <a id="logo" href="#" aria-label="Retourner à la page principale">
       <img src="static/images/logo_ci.webp" alt="Logo du Club Info" id="logo_ci" />
@@ -46,8 +46,9 @@
     <a href="https://www.twitch.tv/ci_polytech_nancy" target="_blank" aria-label="Notre chaîne Twitch"
       class="fab fa-twitch"></a>
   </header>
+  <!-- #endregion -->
 
-  <!-- Header Small -->
+  <!-- #region Header Small -->
   <header class="hide-large">
     <a id="logo" href="#" aria-label="Retourner à la page principale">
       <img src="static/images/logo_ci.webp" alt="Logo du Club Info" id="logo_ci" />
@@ -69,8 +70,9 @@
       </div>
     </div>
   </header>
+  <!-- #endregion -->
 
-  <!-- Large background image and inscription button -->
+  <!-- #region Large background image and inscription button -->
   <div id="intro">
     <div id="intro-container">
       <img id="icon" src="static/images/logo.webp" alt="Logo des PGD" width="200px" fetchpriority="high">
@@ -86,66 +88,71 @@
     </div>
   </div>
 
-  <!-- Summary about the event -->
+  <!-- #region Summary -->
   <section id="event">
     <div class="container">
       <h2 class="on_dark">Présentation</h2>
       <p>
-        <b>Le Poly Games Day</b>, c'est avant tout un concept créé il y a maintenant huit ans par des étudiants pour des
+        <b>Les Poly Gaming Days</b>, c'est avant tout un concept créé il y a maintenant huit ans par des étudiants pour des
         étudiants.<br><br>
-        Viens affronter tes potes sur <b>Brawl Stars</b>, <b>Valorant</b> ou ramène ton équipe sur <b>League Of
+        Viens affronter tes potes sur <b>Clash Royale</b>, <b>Super Smash Bros</b> ou ramène ton équipe sur <b>League Of
           Legends</b> pour terrasser tes adversaires ! <br>
         <b>Tu préfères chiller avec tes amis ?</b> Pas de soucis, d'autres jeux sont disponibles en libre accès.
         <br><br>
         Donc si tu as envie de jouer avec tes amis, que ce soit pour t'amuser ou pour gagner, <b>viens au Poly Games Day
           !</b><br>
 
-        À la clé un <b>gros cashprize</b> pour LoL, Valorant et Brawl Stars alors n'hésite plus et inscris-toi !
+        À la clé un <b>gros cashprize</b> pour LoL, Super Smash Bros et Clash Royale alors n'hésite plus et inscris&#8209;toi&nbsp;!
       </p>
       <div class="youtube-embed-container">
-        <iframe src="https://www.youtube.com/embed/y1Xn5p7JfR4?si=JfLpvfkrYqX21l5G" title="YouTube video player"
+        <iframe></iframe>
+        <!-- <iframe src="https://www.youtube.com/embed/y1Xn5p7JfR4?si=JfLpvfkrYqX21l5G" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
       </div>
       <p class="notice">Cette compétition n'est pas affiliée à Riot Games, Inc. ni parrainée par cette dernière ou
         League
         of Legends Esports.</p>
     </div>
   </section>
+  <!-- #endregion -->
 
-  <!-- Game list and inscriptions -->
+  <!-- #region Game list and registration -->
   <section id="inscriptions">
     <div class="container">
       <h2>Jeux</h2>
-      <p>Les Poly Games Day auront lieu le <b>Samedi 15 Mars 2025</b>, de <b>9h à 19h</b><br>au gymnase de Polytech</p>
-      <!-- <p>Les inscriptions sont fermées actuellement.</p> -->
+      <p>Les Poly Games Day auront lieu le <b>Samedi 21 Mars 2026</b>, de <b>9h à 19h</b><br>au gymnase de Polytech</p>
+      <p class="warning_banner small">Les inscriptions sont fermées actuellement.</p>
 
       <div class="grid" id="game-grid">
         <div class="line-3">
           <div class="column">
-            <a href="./league-of-legends">
+            <a>
+               <!-- href="./league-of-legends"> -->
               <div id="game-img-lol" class="game-img"
-                style="background-image: url('static/images/games/league_of_Legends.webp')" alt="League of Legends"
+                style="background-image: url('static/images/games/main_lol.webp')" alt="League of Legends"
                 loading="lazy"></div>
               <span class="bar"></span>
               <span class="name">League of Legends</span>
             </a>
           </div>
           <div class="column">
-            <a href="./brawl-stars">
-              <div class="game-img" style="background-image: url('static/images/games/brawl_stars.webp')"
-                alt="Brawl Stars" loading="lazy"></div>
+            <a>
+               <!-- href="./clash-royale"> -->
+              <div class="game-img" style="background-image: url('static/images/games/main_clash_royale.webp')"
+                alt="Clash Royale" loading="lazy"></div>
               <span class="bar"></span>
-              <span class="name">Brawl Stars</span>
+              <span class="name">Clash Royale</span>
             </a>
           </div>
           <div class="column">
-            <a href="./valorant">
-              <div class="game-img" style="background-image: url('static/images/games/valorant.webp')" alt="Valorant"
+            <a>
+               <!-- href="./super-smash-bros"> -->
+              <div class="game-img" style="background-image: url('static/images/games/main_smash.webp')" alt="Super Smash Bros"
                 loading="lazy"></div>
               <span class="bar"></span>
-              <span class="name">Valorant</span>
+              <span class="name">Super Smash Bros</span>
             </a>
           </div>
         </div>
@@ -172,18 +179,19 @@
         <br>
         <br>
         <div class="line-1">
-          <a href="reglement" class="button">Règlement</a>
+          <a href="reglement" class="button w400">Règlement</a>
         </div>
       </div>
     </div>
 
   </section>
+  <!-- #endregion -->
 
-  <!-- Schedule -->
+  <!-- #region Schedule -->
   <section id="schedule">
     <div class="container">
       <h2 class="on_dark">La journée</h2>
-      <p>Les <b>commandes de repas</b> se font à partir de <b>12h</b>.</p>
+      <!-- <p>Les <b>commandes de repas</b> se font à partir de <b>12h</b>.</p> -->
       <p class="notice">Le planning est sujet à modifications jusqu'au jour de l'évènement</p>
 
       <div class="warning_container"><span class="warning_banner" id="warning_banner1">A venir</span></div>
@@ -191,9 +199,9 @@
         <thead>
           <tr>
             <td></td>
-            <th scope="col" class="tab_1">Valorant</th>
+            <th scope="col" class="tab_1">Super Smash Bros</th>
             <th scope="col" class="tab_2">League of Legends</th>
-            <th scope="col" class="tab_3">Brawl Stars</th>
+            <th scope="col" class="tab_3">Clash Royale</th>
           </tr>
         </thead>
         <tbody>
@@ -245,13 +253,48 @@
       </table>
     </div>
   </section>
+  <!-- #endregion -->
 
-  <!-- Sponsors -->
+  <!-- # region Sponsors -->
   <section id="sponsors">
     <div class="container">
       <h2>Nos Sponsors</h2>
       <div id="sponsors-icons">
-        <a href="https://www.lyf.eu/fr" target="_blank">
+        <a href="https://www.instagram.com/warpzonenancy/" target="_blank">
+          <img src="static/images/sponsors/logo_warpzone.webp" alt="Warp Zone Nancy" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/smashlorraine/" target="_blank">
+          <img src="static/images/sponsors/logo_smash_lorraine.webp" alt="Smash Lorraine" loading="lazy" />
+        </a>
+        <a href="https://www.bequiet.com/" target="_blank">
+          <img src="static/images/sponsors/logo_bequiet.webp" alt="BeQuiet!" loading="lazy" />
+        </a>
+        <a href="https://www.reseau-stan.com/" target="_blank">
+          <img src="static/images/sponsors/logo_stan.webp" alt="Réseau Stan Nancy" loading="lazy" />
+        </a>
+        <a href="https://www.crous-lorraine.fr/" target="_blank">
+          <img src="static/images/sponsors/logo_crous-lorraine.webp" alt="CROUS Lorraine" loading="lazy" />
+        </a>
+        <a href="https://polytech-nancy.univ-lorraine.fr/" target="_blank">
+          <img src="static/images/sponsors/logo_polytech-nancy.webp" alt="Polytech Nancy" loading="lazy" />
+        </a>
+        <a href="https://www.univ-lorraine.fr/" target="_blank">
+          <img src="static/images/sponsors/logo_univ-lorraine.webp" alt="Université de Lorraine" loading="lazy" />
+        </a>
+
+      </div>
+      <div>
+        <a id="culture-actions"
+          href="https://www.etudiant.gouv.fr/fr/culture-actions-le-dispositif-des-crous-de-soutien-aux-initiatives-etudiantes-1771">
+          <img src="static/images/sponsors/logo_culture-actions.webp" alt="">
+        </a>
+        <a id="grand-nancy" href="https://www.grandnancy.eu">
+          <img src="static/images/sponsors/logo_metropole-grand-nancy.webp" alt="">
+        </a>
+      </div>
+
+        <!-- Sponsors 2024/2025 -->
+        <!-- <a href="https://www.lyf.eu/fr" target="_blank">
           <img src="static/images/sponsors/logo_lyf.webp" alt="Lyf" loading="lazy" />
         </a>
         <a href="https://www.creditmutuel.fr" target="_blank">
@@ -279,30 +322,12 @@
         </a>
         <a href="https://lafeintedelours.fr/" target="_blank">
           <img src="static/images/sponsors/logo_feinte-de-l-ours.webp" alt="La feinte de l'ours" loading="lazy" />
-        </a>
-        <a href="https://www.crous-lorraine.fr/" target="_blank">
-          <img src="static/images/sponsors/logo_crous-lorraine.webp" alt="CROUS Lorraine" loading="lazy" />
-        </a>
-        <a href="https://polytech-nancy.univ-lorraine.fr/" target="_blank">
-          <img src="static/images/sponsors/logo_polytech-nancy.webp" alt="Polytech Nancy" loading="lazy" />
-        </a>
-        <a href="https://www.univ-lorraine.fr/" target="_blank">
-          <img src="static/images/sponsors/logo_univ-lorraine.webp" alt="Université de Lorraine" loading="lazy" />
-        </a>
-      </div>
-      <div>
-        <a id="culture-actions"
-          href="https://www.etudiant.gouv.fr/fr/culture-actions-le-dispositif-des-crous-de-soutien-aux-initiatives-etudiantes-1771">
-          <img src="static/images/sponsors/logo_culture-actions.webp" alt="">
-        </a>
-        <a id="grand-nancy" href="https://www.grandnancy.eu">
-          <img src="static/images/sponsors/logo_metropole-grand-nancy.webp" alt="">
-        </a>
-      </div>
+        </a> -->
     </div>
   </section>
+  <!-- #endregion -->
 
-  <!-- Our dream team :wink::wink: -->
+  <!-- #region Our dream team :wink::wink: -->
   <section id="staff">
     <div class="container">
       <h2 class="on_dark">Notre équipe</h2>
@@ -315,6 +340,7 @@
       <img src="static/images/staff-short.webp" alt="Notre dream team">
     </div>
   </section>
+  <!-- #endregion -->
 
   <section id="footer">
     <a href="mentions-legales">Club Informatique Polytech Nancy © 2025</a>

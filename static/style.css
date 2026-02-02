@@ -128,8 +128,11 @@ header {
     }
 
     #icon {
-      max-width: 10vw;
+      width: 100%;
+      max-width: 12vw;
       min-width: 100px;
+
+      filter: drop-shadow(5px 5px 5px var(--blue)) drop-shadow(-5px -5px 5px var(--red));
     }
 
     & #logo-large-screen {
@@ -176,7 +179,10 @@ header {
 }
 
 section {
+  margin-bottom: 30px;
+
   scroll-margin-top: 65px;
+
 
   &:nth-child(2n) {
     background-color: var(--purple);
@@ -224,7 +230,7 @@ section {
   height: 100%;
   width: 65vw;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 50px 0 10px;
   text-align: center;
 
   display: flex;
@@ -271,6 +277,7 @@ section {
   aspect-ratio: 1;
   background: center no-repeat;
   background-size: contain;
+  filter: drop-shadow(2px 2px 5px rgba(135, 135, 135, 0.5));
 }
 
 #game-img-lol {
@@ -460,6 +467,10 @@ section {
   }
 }
 
+section#staff, #footer {
+  margin-bottom: 0;
+}
+
 
 #footer {
   height: 60px;
@@ -569,17 +580,33 @@ section {
   user-select: none;
   display: block;
   position: relative;
+
+  color: white;
   background-color: #ff0000c0;
+
   transition: none;
+
   font-size: 4em;
-  padding-left: 100px;
-  padding-right: 100px;
+  font-weight: 600;
+
+  padding-left: 150px;
+  padding-right: 150px;
+  border-radius: 24px;
+
+  &.small {
+    font-size: 1.5em;
+    border-radius: 8px;
+    padding: 10px 100px;
+
+    margin-bottom: 50px;
+  }
 }
 
 #warning_banner1 {
   rotate: 35deg;
-  top: 400px;
-  display: none;
+  top: 300px;
+  /* Uncomment when planning is available */
+  /* display: none; */
 }
 
 #warning_banner2 {
@@ -593,7 +620,8 @@ section {
 .warning_container {
   position: absolute;
   display: block;
-  height: 0;
+  /* Uncomment when planning is available */
+  /* height: 0; */
 }
 
 /* Custom link underline */
@@ -653,8 +681,11 @@ section {
   aspect-ratio: 16/9;
 
   & iframe {
+    border-radius: 24px;
     width: 100%;
     height: 100%;
+
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
   }
 }
 

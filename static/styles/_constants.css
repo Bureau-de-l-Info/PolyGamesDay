@@ -1,13 +1,13 @@
 :root {
   --purple: #76238f;
-  --blue: #1c7ebb;
+  --blue: #5fa1a3;
   --dark-blue: #040051;
-  --red: #e22f8a;
+  --red: #cc3e57;
 
   --on-pink: white;
   --on-dark-blue: white;
-  --on-blue: ;
-  --on-red: ;
+  --on-blue: white;
+  --on-red: white;
 
   /* Measurements */
   --button-icon-size: 48px;
@@ -15,7 +15,7 @@
   /* Ideas on https://www.realtimecolors.com */
   /* Colors from https://www.tints.dev/ */
   /* https://material-foundation.github.io/material-theme-builder/ */
-
+  /* Old colors *
   --md-light-color-primary: rgb(44 99 139);
   --md-light-color-surface-tint: rgb(44 99 139);
   --md-light-color-on-primary: rgb(255 255 255);
@@ -115,4 +115,5 @@
   --md-dark-color-surface-container: rgb(28 32 36);
   --md-dark-color-surface-container-high: rgb(39 42 46);
   --md-dark-color-surface-container-highest: rgb(49 53 57);
+  /**/
 }
