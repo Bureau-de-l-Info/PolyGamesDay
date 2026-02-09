@@ -1,10 +1,14 @@
 :root {
+  --primary: var(--dark-blue);
+  --on-primary: var(--on-dark-blue);
+
   --purple: #76238f;
   --blue: #5fa1a3;
   --dark-blue: #040051;
   --red: #cc3e57;
+  --dark-red: #6c1122;
 
-  --on-pink: white;
+  --on-purple: white;
   --on-dark-blue: white;
   --on-blue: white;
   --on-red: white;

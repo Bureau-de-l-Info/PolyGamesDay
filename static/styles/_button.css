@@ -14,9 +14,12 @@
   font-weight: bold;
 
   transition: all 0.2s ease-in-out;
+  text-align: center;
+
+  user-select: none;
 
   &:hover {
-    box-shadow: 0 2px 4px grey;
+    box-shadow: 0 2px 4px var(--red);
     color: var(--on-red);
     background-color: var(--red);
   }
@@ -60,5 +63,7 @@
     border: none !important;
     color: rgb(151, 147, 153) !important;
     background-color: rgb(226, 220, 228) !important;
+
+    box-shadow: none;
   }
 }

@@ -1,0 +1,74 @@
+.game.container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+
+  gap: 10px;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+
+  & img {
+    width: auto;
+    max-height: 350px;
+    padding: 0;
+
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  &.left {
+    flex-direction: row-reverse;
+
+    & span {
+      text-align: right;
+    }
+  }
+}
+
+.game.text {
+  flex-grow: 1;
+
+  font-weight: 900;
+  font-size: 60px;
+  font-family: "Iceland";
+  font-style: italic;
+
+  color: var(--red);
+
+  filter: drop-shadow(2px 2px 0 var(--on-red)) drop-shadow(4px 4px 0 var(--red));
+
+  text-align: left;
+  text-indent: -80px;
+  padding-left: 80px;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.game.container:hover .text,
+.game.container:hover img {
+  filter: drop-shadow(0 0 8px var(--blue));
+}
+
+@media (max-width: 800px) {
+  .game.container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .game.text {
+    text-align: center;
+    text-indent: 0;
+    padding-left: 0;
+  }
+
+  .game.container.left {
+    flex-direction: column;
+
+    & span {
+      text-align: center;
+    }
+  }
+}
