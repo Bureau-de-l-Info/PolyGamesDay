@@ -3,6 +3,11 @@
 @import "./styles/_button.css";
 @import "./styles/_video.css";
 
+@import "./fonts/iceland.css";
+
+@import "./styles/intro.css";
+@import "./styles/game-section.css";
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -27,11 +32,15 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--blue);
+    background-color: var(--red);
+  }
 
-    &:hover {
-      background-color: var(--red);
-    }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--red);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 
   & a {
@@ -84,14 +93,14 @@ header {
   font-size: 30px;
   padding-right: 30px;
 
-  #logo {
+  .logo_ci {
     cursor: pointer;
     user-select: none;
     font-size: 28px;
     padding-left: 30px;
   }
 
-  #logo_ci {
+  .logo_ci img {
     width: 35px;
     vertical-align: middle;
     margin-bottom: 10px;
@@ -109,9 +118,14 @@ header {
   height: 100vh;
   min-height: 600px;
   width: 100%;
-  background: url("images/fond.webp") fixed center no-repeat;
+  /* background: url("images/fond.webp") fixed center no-repeat; */
   background-size: cover;
   justify-content: center;
+
+  img.bg {
+    position: absolute;
+    z-index: -10;
+  }
 
   & #intro-container {
     display: flex;
@@ -146,12 +160,14 @@ header {
       text-align: center;
       font-size: 2em;
       margin-bottom: 10px;
+
+      filter: drop-shadow(0 0 4px black);
     }
   }
 }
 
 #cta {
-  color: var(--on-pink);
+  color: var(--on-primary);
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
@@ -186,16 +202,34 @@ section {
   scroll-margin-top: 65px;
 
   &:nth-child(2n) {
-    background-color: var(--purple);
-    color: var(--on-pink);
+    background: var(--dark-red);
+    /* backdrop-filter: blur(10px); */
+    color: var(--on-primary);
+    mask: linear-gradient(transparent, black var(--dark-red) 95%);
+
+    & * {
+      mask: none;
+    }
   }
 
   & h2 {
-    font-size: 32px;
+    font-size: 60px;
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 45px;
+
+    font-family: "Iceland";
+    font-style: italic;
+
+    width: 100%;
+
+    background: linear-gradient(45deg, var(--blue) 0%, var(--red) 100%);
+    background: var(--blue);
+    filter: drop-shadow(2px 2px 0 var(--on-red))
+      drop-shadow(4px 4px 0 var(--red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     &::after {
       content: "";
@@ -206,6 +240,8 @@ section {
       margin-top: 15px;
       left: calc(50% - 32px);
       background-color: black;
+
+      filter: none;
     }
 
     &.on_dark::after {
@@ -325,7 +361,7 @@ section {
 #inscriptions {
   & img {
     max-width: 65%;
-    padding: 4% 0;
+    /* padding: 4% 0; */
   }
 }
 
@@ -473,6 +509,7 @@ section {
 #group-photo {
   display: flex;
   flex-direction: column;
+  filter: drop-shadow(0 0 20px white);
 
   & img {
     flex-grow: 1;
@@ -633,7 +670,7 @@ section#staff,
   position: absolute;
   display: block;
   /* Uncomment when planning is available */
-  /* height: 0; */
+  height: 0;
 }
 
 /* Custom link underline */
@@ -741,7 +778,7 @@ section#staff,
       margin: 0;
       margin-bottom: 10px;
       white-space: pre-wrap;
-      content: "23 Mars 2024\A 7e édition";
+      content: "23 Mars 2024\A 9e édition";
     }
 
     & #cta {
@@ -759,10 +796,6 @@ section#staff,
 
     & p {
       font-size: 16px;
-    }
-
-    & h2 {
-      font-size: 26px;
     }
   }
 

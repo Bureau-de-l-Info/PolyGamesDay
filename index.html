@@ -23,7 +23,7 @@
 
   <title>Poly Games Day</title>
 
-  <link rel="icon" href="static/images/logo.webp" />
+  <link rel="icon" href="static/favicon.ico" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
 </head>
@@ -31,8 +31,8 @@
 <body>
   <!-- #region Header large -->
   <header class="hide-small">
-    <a id="logo" href="#" aria-label="Retourner à la page principale">
-      <img src="static/images/logo_ci.webp" alt="Logo du Club Info" id="logo_ci" />
+    <a class="logo_ci" href="#" aria-label="Retourner à la page principale">
+      <img src="static/images/logo_ci.webp" alt="Logo du Club Info" />
       PGD
     </a>
     <span class="flex-gap-fill"></span>
@@ -50,8 +50,8 @@
 
   <!-- #region Header Small -->
   <header class="hide-large">
-    <a id="logo" href="#" aria-label="Retourner à la page principale">
-      <img src="static/images/logo_ci.webp" alt="Logo du Club Info" id="logo_ci" />
+    <a class="logo_ci" href="#" aria-label="Retourner à la page principale">
+      <img src="static/images/logo_ci.webp" alt="Logo du Club Info" />
       PGD
     </a>
     <span class="flex-gap-fill"></span>
@@ -73,20 +73,32 @@
   <!-- #endregion -->
 
   <!-- #region Large background image and inscription button -->
-  <div id="intro">
+  <div id="intro-container">
+    <img class="icon" src="static/images/logo.webp" alt="Icone des PGD">
+
+    <img id="logo-large" src="static/images/title.webp" alt="Logo des PGD">
+    <img id="logo-small" src="static/images/title_compact.webp" alt="Logo des PGD">
+
+    <h2>21&nbsp;Mars&nbsp;2026 - 9e&nbsp;édition</h2>
+
+    <a id="enroll-button" aria-disabled="true" class="button button-disabled" target="_blank">INSCRIPTIONS FERMÉES</a>
+  </div>
+
+  <!-- <div id="intro">
+    <img src="static/images/banniere_fond.png" alt="" class="bg" style="width: 200%; top: -40%;">
     <div id="intro-container">
       <img id="icon" src="static/images/logo.webp" alt="Logo des PGD" width="200px" fetchpriority="high">
       <img id="logo-large-screen" class="hide-small" width=100% height=auto src="static/images/title.webp"
         alt="Poly Games Day" fetchpriority="high">
       <img id="logo-small-screen" class="hide-large" width=100% height=auto src="static/images/title_compact.webp"
         alt="Poly Games Day" fetchpriority="high">
-      <h2>15&nbsp;Mars&nbsp;2025 - 8e&nbsp;édition</h2>
+      <h2>21&nbsp;Mars&nbsp;2026 - 9e&nbsp;édition</h2>
       <div style="width: 70%;">
         <a id="cta" aria-disabled="true"
           class="button button-disabled" target="_blank">INSCRIPTIONS FERMÉES</a>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- #region Summary -->
   <section id="event">
@@ -96,11 +108,10 @@
         <b>Les Poly Gaming Days</b>, c'est avant tout un concept créé il y a maintenant huit ans par des étudiants pour des
         étudiants.<br><br>
         Viens affronter tes potes sur <b>Clash Royale</b>, <b>Super Smash Bros</b> ou ramène ton équipe sur <b>League Of
-          Legends</b> pour terrasser tes adversaires ! <br>
-        <b>Tu préfères chiller avec tes amis ?</b> Pas de soucis, d'autres jeux sont disponibles en libre accès.
+          Legends</b> pour terrasser tes adversaires&nbsp;!<br>
+        <b>Tu préfères chiller avec tes amis&nbsp;?</b> Pas de soucis, d'autres jeux sont disponibles en libre accès.
         <br><br>
-        Donc si tu as envie de jouer avec tes amis, que ce soit pour t'amuser ou pour gagner, <b>viens au Poly Games Day
-          !</b><br>
+        Donc si tu as envie de jouer avec tes amis, que ce soit pour t'amuser ou pour gagner, <b>viens au Poly Games Day&nbsp;!</b><br>
 
         À la clé un <b>gros cashprize</b> pour LoL, Super Smash Bros et Clash Royale alors n'hésite plus et inscris&#8209;toi&nbsp;!
       </p>
@@ -122,14 +133,27 @@
   <section id="inscriptions">
     <div class="container">
       <h2>Jeux</h2>
-      <p>Les Poly Games Day auront lieu le <b>Samedi 21 Mars 2026</b>, de <b>9h à 19h</b><br>au gymnase de Polytech</p>
+      <p>Les Poly Games Day auront lieu le <b>Samedi 21 Mars 2026</b>, de <b>9h à 20h</b><br>au gymnase de Polytech</p>
       <p class="warning_banner small">Les inscriptions sont fermées actuellement.</p>
 
-      <div class="grid" id="game-grid">
+      <div class="game container">
+        <img src="static/images/games/logo_League_of_Legends.webp" alt="League of Legends">
+        <span class="game text">LEAGUE<br>OF LEGENDS</span>
+      </div>
+      <div class="game container left">
+        <img src="static/images/games/logo_Super_Smash_Bros.webp" alt="Super Smash Bros">
+        <span class="game text">SUPER SMASH<br>BROS ULTIMATE</span>
+      </div>
+      <div class="game container">
+        <img src="static/images/games/logo_Clash_Royale.webp" alt="Clash Royale">
+        <span class="game text">CLASH<br>ROYALE</span>
+      </div>
+
+
+      <!-- <div class="grid" id="game-grid">
         <div class="line-3">
           <div class="column">
-            <a>
-               <!-- href="./league-of-legends"> -->
+            <a href="./league-of-legends">
               <div id="game-img-lol" class="game-img"
                 style="background-image: url('static/images/games/main_lol.webp')" alt="League of Legends"
                 loading="lazy"></div>
@@ -138,8 +162,7 @@
             </a>
           </div>
           <div class="column">
-            <a>
-               <!-- href="./clash-royale"> -->
+            <a href="./clash-royale">
               <div class="game-img" style="background-image: url('static/images/games/main_clash_royale.webp')"
                 alt="Clash Royale" loading="lazy"></div>
               <span class="bar"></span>
@@ -147,8 +170,7 @@
             </a>
           </div>
           <div class="column">
-            <a>
-               <!-- href="./super-smash-bros"> -->
+            <a href="./super-smash-bros">
               <div class="game-img" style="background-image: url('static/images/games/main_smash.webp')" alt="Super Smash Bros"
                 loading="lazy"></div>
               <span class="bar"></span>
@@ -181,9 +203,22 @@
         <div class="line-1">
           <a href="reglement" class="button w400">Règlement</a>
         </div>
-      </div>
+      </div> -->
     </div>
 
+    <!-- TODO: CASHPRIZE (la thunasse) -->
+
+  </section>
+  <!-- #endregion -->
+
+  <!-- #region Free Games -->
+  <section>
+    <!-- [ ]TODO: Jeux libres
+     - Simulateur tuture (Race System)
+     - Casque VR (Race System)
+     - Serveur Minécraft
+     - Une chiée de consoles (genre Nintendo)
+    -->
   </section>
   <!-- #endregion -->
 
@@ -192,7 +227,7 @@
     <div class="container">
       <h2 class="on_dark">La journée</h2>
       <!-- <p>Les <b>commandes de repas</b> se font à partir de <b>12h</b>.</p> -->
-      <p class="notice">Le planning est sujet à modifications jusqu'au jour de l'évènement</p>
+      <p class="notice">Le planning peut être sujet à modifications jusqu'au jour de l'évènement</p>
 
       <div class="warning_container"><span class="warning_banner" id="warning_banner1">A venir</span></div>
       <table style="overflow-x: scroll;">
@@ -261,14 +296,24 @@
     <div class="container">
       <h2>Nos Sponsors</h2>
       <div id="sponsors-icons">
-        <a href="https://www.instagram.com/warpzonenancy/" target="_blank">
+        <!-- <a href="https://www.instagram.com/warpzonenancy/" target="_blank">
           <img src="static/images/sponsors/logo_warpzone.webp" alt="Warp Zone Nancy" loading="lazy" />
-        </a>
+        </a> -->
         <a href="https://www.instagram.com/smashlorraine/" target="_blank">
           <img src="static/images/sponsors/logo_smash_lorraine.webp" alt="Smash Lorraine" loading="lazy" />
         </a>
         <a href="https://www.bequiet.com/" target="_blank">
           <img src="static/images/sponsors/logo_bequiet.webp" alt="BeQuiet!" loading="lazy" />
+        </a>
+        <a href="https://www.lafaille-nancy.fr/fr/" target="_blank">
+          <img src="static/images/sponsors/logo_la-faille.webp" alt="La Faille" loading="lazy" />
+        </a>
+        <a href="https://lafeintedelours.fr/" target="_blank">
+          <img src="static/images/sponsors/logo_feinte-de-l-ours.webp" alt="La feinte de l'ours" loading="lazy" />
+        </a>
+        <a href="https://cavernedugobelin.com" target="_blank">
+          <img src="static/images/sponsors/logo_la-caverne-du-gobelin.webp" alt="La Caverne du Gobelin"
+            loading="lazy" />
         </a>
         <a href="https://www.reseau-stan.com/" target="_blank">
           <img src="static/images/sponsors/logo_stan.webp" alt="Réseau Stan Nancy" loading="lazy" />
@@ -282,7 +327,10 @@
         <a href="https://www.univ-lorraine.fr/" target="_blank">
           <img src="static/images/sponsors/logo_univ-lorraine.webp" alt="Université de Lorraine" loading="lazy" />
         </a>
-
+        <a href="https://www.univ-lorraine.fr/la-vie-a-luniversite-de-lorraine/initiatives-etudiantes/" target="_blank">
+          <img src="static/images/sponsors/logo_fsdie.webp"
+            alt="Fonds de Solidarité et Développement des Initiatives Etudiantes" loading="lazy" />
+        </a>
       </div>
       <div>
         <a id="culture-actions"
@@ -304,25 +352,11 @@
         <a href="https://www.dominos.fr/" target="_blank">
           <img src="static/images/sponsors/logo_dominos-pizza.webp" alt="Domino's Pizza" loading="lazy" />
         </a>
-        <a href="https://www.univ-lorraine.fr/la-vie-a-luniversite-de-lorraine/initiatives-etudiantes/" target="_blank">
-          <img src="static/images/sponsors/logo_fsdie.webp"
-            alt="Fonds de Solidarité et Développement des Initiatives Etudiantes" loading="lazy" />
-        </a>
         <a href="https://www.kosy-apparthotels.com/nancy-arborea/" target="_blank">
           <img src="static/images/sponsors/logo_kosy-appart-hotels.webp" alt="Kosy appart'hôtels" loading="lazy" />
         </a>
-        <a href="https://cavernedugobelin.com" target="_blank">
-          <img src="static/images/sponsors/logo_la-caverne-du-gobelin.webp" alt="La Caverne du Gobelin"
-            loading="lazy" />
-        </a>
         <a href="https://www.jcautoecole.fr/" target="_blank">
           <img src="static/images/sponsors/logo_jc-autoecole.webp" alt="JC Auto Ecole" loading="lazy" />
-        </a>
-        <a href="https://www.lafaille-nancy.fr/fr/" target="_blank">
-          <img src="static/images/sponsors/logo_la-faille.webp" alt="La Faille" loading="lazy" />
-        </a>
-        <a href="https://lafeintedelours.fr/" target="_blank">
-          <img src="static/images/sponsors/logo_feinte-de-l-ours.webp" alt="La feinte de l'ours" loading="lazy" />
         </a> -->
     </div>
   </section>
