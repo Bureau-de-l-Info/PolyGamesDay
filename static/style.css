@@ -197,8 +197,6 @@ header {
 }
 
 section {
-  margin-bottom: 30px;
-
   scroll-margin-top: 65px;
 
   &:nth-child(2n) {
@@ -228,6 +226,7 @@ section {
     background: var(--blue);
     filter: drop-shadow(2px 2px 0 var(--on-red))
       drop-shadow(4px 4px 0 var(--red));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -266,7 +265,7 @@ section {
   height: 100%;
   width: 65vw;
   margin: 0 auto;
-  padding: 50px 0 10px;
+  padding: 20px 0;
   text-align: center;
 
   display: flex;
@@ -482,13 +481,12 @@ section {
     vertical-align: middle;
     transition: all 0.2s ease-in-out;
 
-    box-shadow: 0 1px 2px grey;
     background-color: white;
 
     &:hover {
       transform: scale(1.05);
       -webkit-transform: scale(1.05);
-      box-shadow: 0 5px 10px grey;
+      box-shadow: 0 5px 10px var(--on-red);
     }
   }
 
