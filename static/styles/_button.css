@@ -2,26 +2,30 @@
 
 .button {
   padding: 15px 30px;
-  background-color: var(--blue);
-  color: var(--on-blue);
+  background-color: var(--red);
+  color: var(--on-red);
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+
+  align-self: stretch;
 
   border-radius: 10px;
 
   font-size: 1.8em;
   font-weight: bold;
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1);
   text-align: center;
 
   user-select: none;
 
   &:hover {
-    box-shadow: 0 2px 4px var(--red);
-    color: var(--on-red);
-    background-color: var(--red);
+    color: var(--on-blue);
+    background-color: var(--blue);
+    filter: drop-shadow(0 0 6px var(--red));
+
+    scale: 1.1;
   }
 
   &.w150 {

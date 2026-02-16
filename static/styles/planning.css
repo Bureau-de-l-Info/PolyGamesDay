@@ -1,0 +1,132 @@
+#schedule .container {
+  align-items: stretch;
+}
+
+#schedule table {
+  --border-width: 1.5px;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-collapse: collapse;
+  background-color: var(--blue);
+
+  thead {
+    & td {
+      border-bottom: none;
+    }
+
+    & th {
+      border: var(--border-width) solid black;
+    }
+  }
+
+  & th {
+    padding: 0;
+    height: 15px;
+  }
+
+  & td,
+  th {
+    padding: 5px;
+    font-weight: 700;
+
+    &:not(:first-child) {
+      width: 250px;
+      height: 30px;
+      padding: 5px;
+      text-transform: uppercase;
+    }
+
+    &:first-child {
+      top: -19px;
+      height: 35px;
+      position: relative;
+      font-size: 0.8rem;
+      text-align: right;
+    }
+  }
+
+  td {
+    border: var(--border-width) solid black;
+  }
+
+  & .tab_1 {
+    background-color: #8289eb;
+  }
+
+  & .tab_2 {
+    background-color: #dd5858;
+  }
+
+  & .tab_3 {
+    color: #143914;
+    background-color: #92d889;
+  }
+
+  & .break {
+    color: #532753;
+    background-color: #ffbaf9;
+  }
+}
+
+table thead th.header {
+  width: 100px;
+}
+
+#schedule tbody tr td:first-child,
+#schedule thead tr th:first-child {
+  border: none;
+}
+
+#table-small {
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+
+}
+
+#table-small div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  background-color: var(--red);
+
+  margin-top: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &.collapsed table {
+    height: 0;
+    display: block;
+    overflow: hidden;
+    border: none;
+  }
+  & table {
+    margin: 0;
+  }
+
+  & button {
+    background-color: var(--red);
+    padding: 25px;
+
+    font-family: 'Iceland';
+    font-style: italic;
+    font-size: 2.5em;
+    vertical-align: baseline;
+
+    & i {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #table-small {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  #table-large {
+    display: none;
+  }
+}

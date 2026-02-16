@@ -7,6 +7,7 @@
 
 @import "./styles/intro.css";
 @import "./styles/game-section.css";
+@import "./styles/planning.css";
 
 * {
   box-sizing: border-box;
@@ -47,7 +48,7 @@ body {
     display: inline-block;
     color: black;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1);
 
     &:hover {
       color: var(--blue);
@@ -145,8 +146,7 @@ header {
       max-width: 12vw;
       min-width: 100px;
 
-      filter: drop-shadow(5px 5px 5px var(--blue))
-        drop-shadow(-5px -5px 5px var(--red));
+      filter: drop-shadow(5px 5px 5px var(--blue)) drop-shadow(-5px -5px 5px var(--red));
     }
 
     & #logo-large-screen {
@@ -174,8 +174,8 @@ header {
   font-weight: 700;
   text-align: center;
   transition:
-    all 0.2s ease,
-    transform 0.1s ease;
+    all 0.2s cubic-bezier(0.5, 0, 0, 1),
+    transform 0.1s cubic-bezier(0.5, 0, 0, 1);
 
   width: 100%;
   max-width: 500px;
@@ -224,8 +224,7 @@ section {
 
     background: linear-gradient(45deg, var(--blue) 0%, var(--red) 100%);
     background: var(--blue);
-    filter: drop-shadow(2px 2px 0 var(--on-red))
-      drop-shadow(4px 4px 0 var(--red));
+    filter: drop-shadow(2px 2px 0 var(--on-red)) drop-shadow(4px 4px 0 var(--red));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -255,7 +254,7 @@ section {
 }
 
 .notice {
-  color: #d5c6c6;
+  color: #c3b5b5;
   font-style: italic;
   font-size: 0.75rem;
   margin-bottom: 0;
@@ -337,15 +336,50 @@ section {
 }
 
 #free-games {
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 80px;
+  padding: 20px;
+
+  & .free-games-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img:first-child {
+      margin-top: -40px;
+      margin-bottom: -40px;
+    }
+
+    & p {
+      width: 359px;
+      flex-shrink: 0;
+      color: #fff;
+      font-family: Iceland;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      font-style: italic;
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+
+      & p {
+        text-align: right;
+      }
+    }
+  }
 }
 
-#free-games div {
-  /* max-width: 320px; */
-  min-width: 200px;
-  width: 80%;
-  height: 150px;
-  aspect-ratio: 912/500;
+@media (max-width: 768px) {
+  #free-games .free-games-container {
+    flex-direction: column !important;
+  }
 }
 
 .bar {
@@ -361,97 +395,6 @@ section {
   & img {
     max-width: 65%;
     /* padding: 4% 0; */
-  }
-}
-
-#schedule table {
-  --border-width: 1.5px;
-
-  margin: 25px auto;
-  border-collapse: collapse;
-  border: var(--border-width) solid black;
-  background-color: var(--blue);
-
-  thead {
-    & td {
-      border-bottom: none;
-    }
-
-    & th {
-      border: var(--border-width) solid black;
-    }
-  }
-
-  & th {
-    padding: 0;
-    height: 15px;
-  }
-
-  & td,
-  th {
-    padding: 5px;
-    font-weight: 700;
-
-    &:not(:first-child) {
-      width: 250px;
-      height: 30px;
-      padding: 5px;
-      text-transform: uppercase;
-    }
-
-    &:first-child {
-      top: -19px;
-      height: 35px;
-      position: relative;
-      font-size: 0.8rem;
-      text-align: right;
-    }
-  }
-
-  td {
-    border: var(--border-width) solid black;
-  }
-
-  & .tab_1 {
-    background-color: #8289eb;
-  }
-
-  & .tab_2 {
-    background-color: #dd5858;
-  }
-
-  & .tab_3 {
-    color: #143914;
-    background-color: #92d889;
-  }
-
-  & .tab_1-2 {
-    background: repeating-linear-gradient(
-      90deg,
-      #8289eb,
-      #8289eb 50%,
-      #dd5858 50%,
-      #dd5858 100%
-    );
-  }
-
-  & .tab_3_empty {
-    background: repeating-linear-gradient(
-      45deg,
-      #92d889,
-      #92d889 5px,
-      #71a56a 5px,
-      #71a56a 10px
-    );
-  }
-
-  & .break {
-    color: #532753;
-    background-color: #ffbaf9;
-  }
-
-  & .empty {
-    background-color: #ffffff5d;
   }
 }
 
@@ -479,14 +422,14 @@ section {
 
     border-radius: 10px;
     vertical-align: middle;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1);
 
     background-color: white;
 
     &:hover {
       transform: scale(1.05);
       -webkit-transform: scale(1.05);
-      box-shadow: 0 5px 10px var(--on-red);
+      box-shadow: 0 5px 10px var(--blue);
     }
   }
 
@@ -539,9 +482,9 @@ section#staff,
   font-size: 17px;
   background-color: var(--blue);
   transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    opacity 0.2s ease;
+    background-color 0.2s cubic-bezier(0.5, 0, 0, 1),
+    transform 0.2s cubic-bezier(0.5, 0, 0, 1),
+    opacity 0.2s cubic-bezier(0.5, 0, 0, 1);
 
   &:hover {
     background-color: var(--red);
@@ -675,8 +618,7 @@ section#staff,
 .link {
   /* TODO: move to general file --> not specific to a component */
   color: var(--blue);
-  background: linear-gradient(currentColor 0 0) bottom left/
-    var(--underline-width, 0%) 2px no-repeat;
+  background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 2px no-repeat;
   display: inline-block;
   padding-bottom: 0.2em;
   text-decoration: none;
@@ -717,7 +659,8 @@ section#staff,
       margin-bottom: 30px;
     }
   }
-  & ul li, & span br {
+  & ul li,
+  & span br {
     margin-bottom: 8px;
   }
 
@@ -741,6 +684,14 @@ section#staff,
     height: 100%;
 
     filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.flex {
+  display: flex;
+
+  &.vertical {
+    flex-direction: column;
   }
 }
 
