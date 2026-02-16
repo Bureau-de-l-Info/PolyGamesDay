@@ -691,7 +691,11 @@ section#staff,
 .rules {
   display: flex;
   flex-direction: column;
+  word-wrap: break-word;
+
   width: 95vw;
+  max-width: 750px;
+
   margin: auto;
 
   & h1 {
@@ -706,12 +710,15 @@ section#staff,
 
   & span {
     line-height: 1.5;
-    width: 85vw;
     margin: auto;
+    margin-left: 30px;
 
     &:last-child {
       margin-bottom: 30px;
     }
+  }
+  & ul li, & span br {
+    margin-bottom: 8px;
   }
 
   img {
