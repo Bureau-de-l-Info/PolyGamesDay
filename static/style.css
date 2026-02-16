@@ -330,6 +330,28 @@ section {
   flex-grow: 1;
 }
 
+/*
+Source - https://stackoverflow.com/a/63454409
+Posted by Lety, modified by community. See post 'Timeline' for change history
+Retrieved 2026-02-16, License - CC BY-SA 4.0
+*/
+
+.video-container {
+  overflow: hidden;
+}
+
+#hero-smash-bros {
+  height: 650px;
+  width: auto;
+  position: relative;
+  z-index: -10;
+  margin: auto;
+}
+
+#overview-smash-title {
+  filter: drop-shadow(0 0 2px black);
+}
+
 #free-games a,
 #free-hardware a {
   height: 100%;
