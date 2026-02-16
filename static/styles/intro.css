@@ -10,8 +10,8 @@
   gap: 40px;
   /* justify-content: space-evenly; */
 
-  background: center url("/static/images/banniere_fond.webp");
-  background-size: 200%;
+  background: center url("/static/images/fond.svg");
+  background-size: 50%;
   background-position: top -10vw center;
 }
 

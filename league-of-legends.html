@@ -1,134 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="PGD,Polytech,Nancy,Jeu vidéo,LAN,e-sport,Tournoi,Poly Gaming Day" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
+    <meta name="google-site-verification" content="R9ypPytCcpkWHXkFNWHsxwZ1dY_oDqmIUXsrzLjoU9I" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Poly Gaming Day" />
+    <meta property="og:description" content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
+    <meta property="og:url" content="https://pgd.ci-polytech-nancy.fr/" />
+    <meta property="og:image" content="https://pgd.ci-polytech-nancy.fr/static/images/logo.webp" />
+    <meta content="#cc3e57" data-react-helmet="true" name="theme-color" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="static/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="keywords" content="PGD,Polytech,Nancy,Jeu vidéo,LAN,e-sport,Tournoi,Poly Gaming Day" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
-  <meta name="google-site-verification" content="R9ypPytCcpkWHXkFNWHsxwZ1dY_oDqmIUXsrzLjoU9I" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Poly Gaming Day" />
-  <meta property="og:description"
-    content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
-  <meta property="og:url" content="https://pgd.ci-polytech-nancy.fr/" />
-  <meta property="og:image" content="https://pgd.ci-polytech-nancy.fr/static/images/logo.webp" />
-  <meta content="#cc3e57" data-react-helmet="true" name="theme-color" />
+    <title>Poly Gaming Day</title>
 
-  <title>Poly Gaming Day</title>
+    <link rel="icon" href="static/favicon.webp" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+  </head>
 
-  <link rel="icon" href="static/images/logo.webp" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
-</head>
+  <body>
+    <!-- Header large -->
+    <header class="hide-small">
+      <a class="logo_ci" href="/" aria-label="Retourner à la page principale">
+        <img src="static/images/logo_ci.webp" alt="Logo du Club Info" />
+        PGD
+      </a>
+      <span class="flex-gap-fill"></span>
+      <a href="https://www.instagram.com/club_info_polytech_nancy/" target="_blank" aria-label="Notre Instagram" class="fab fa-instagram"></a>
+      <a href="https://www.discord.gg/PMNFaNG" target="_blank" aria-label="Notre Discord" class="fab fa-discord"></a>
+      <a href="https://www.facebook.com/ClubInfoPolytechNancy" target="_blank" aria-label="Notre Facebook" class="fab fa-facebook"></a>
+      <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank" aria-label="Notre Youtube" class="fab fa-youtube"></a>
+      <a href="https://www.twitch.tv/ci_polytech_nancy" target="_blank" aria-label="Notre chaîne Twitch" class="fab fa-twitch"></a>
+    </header>
 
-<body>
-  <!-- Header large -->
-  <header class="hide-small">
-    <a class="logo_ci" href="/" aria-label="Retourner à la page principale">
-      <img src="static/images/logo_ci.webp" alt="Logo du Club Info"  />
-      PGD
-    </a>
-    <span class="flex-gap-fill"></span>
-    <a href="https://www.instagram.com/poly_gaming_day" target="_blank" aria-label="Notre Instagram"
-      class="fab fa-instagram"></a>
-    <a href="https://www.discord.gg/PMNFaNG" target="_blank" aria-label="Notre Discord" class="fab fa-discord"></a>
-    <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank" aria-label="Notre Youtube"
-      class="fab fa-youtube"></a>
-    <a href="https://www.twitch.tv/ci_polytech_nancy" target="_blank" aria-label="Notre chaîne Twitch"
-      class="fab fa-twitch"></a>
-  </header>
+    <!-- Header Small -->
+    <header class="hide-large">
+      <a class="logo_ci" href="/" aria-label="Retourner à la page principale">
+        <img src="static/images/logo_ci.webp" alt="Logo du Club Info" />
+        PGD
+      </a>
+      <span class="flex-gap-fill"></span>
+      <div class="dropdown">
+        <a class="fas fa-link"></a>
+        <div class="dropdown-content">
+          <a href="https://www.instagram.com/club_info_polytech_nancy/" target="_blank" aria-label="Notre Instagram" class="fab fa-instagram"></a>
+          <a href="https://www.discord.gg/PMNFaNG" target="_blank" aria-label="Notre Discord" class="fab fa-discord"></a>
+          <a href="https://www.facebook.com/ClubInfoPolytechNancy" target="_blank" aria-label="Notre Facebook" class="fab fa-facebook"></a>
+          <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank" aria-label="Notre Youtube" class="fab fa-youtube"></a>
+          <a href="https://www.twitch.tv/ci_polytech_nancy" target="_blank" aria-label="Notre chaîne Twitch" class="fab fa-twitch"></a>
+        </div>
+      </div>
+    </header>
 
-  <!-- Header Small -->
-  <header class="hide-large">
-    <a class="logo_ci" href="/" aria-label="Retourner à la page principale">
-      <img src="static/images/logo_ci.webp" alt="Logo du Club Info"  />
-      PGD
-    </a>
-    <span class="flex-gap-fill"></span>
-    <div class="dropdown">
-      <a class="fas fa-link"></a>
-      <div class="dropdown-content">
-        <a href="https://www.instagram.com/poly_gaming_day" target="_blank" aria-label="Notre Instagram"
-          class="fab fa-instagram"></a>
-        <a href="https://www.discord.gg/PMNFaNG" target="_blank" aria-label="Notre Discord" class="fab fa-discord"></a>
-        <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank" aria-label="Notre Youtube"
-          class="fab fa-youtube"></a>
-        <a href="https://www.twitch.tv/ci_polytech_nancy" target="_blank" aria-label="Notre chaîne Twitch"
-          class="fab fa-twitch"></a>
+    <div class="floating-button-container">
+      <button class="button-icon video-button-toggle" onclick="toggleVideo()">
+        <i class="fa fa-pause fa-lg"></i>
+      </button>
+    </div>
+
+    <div class="video-container">
+      <video muted loop autoplay playsinline>
+        <source class="video-source" src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ab3e227121c53aacab0c9b9f7a48adbc65db520.webm" type="video/webm" />
+      </video>
+
+      <div class="game-description-container">
+        <img id="overview-league_of_legends-title" class="image-title" src="static/images/overview_pages/league-of-legends-logo.png" />
       </div>
     </div>
-  </header>
 
-  <div class="floating-button-container">
-    <button class="button-icon video-button-toggle" onclick="toggleVideo()">
-      <i class="fa fa-pause fa-lg"></i>
-    </button>
-  </div>
-
-  <div class="video-container">
-    <video muted loop autoplay playsinline>
-      <source class="video-source"
-        src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ab3e227121c53aacab0c9b9f7a48adbc65db520.webm"
-        type="video/webm" />
-    </video>
-
-    <div class="game-description-container">
-
-      <img id="overview-league_of_legends-title" class="image-title"
-        src="static/images/overview_pages/league-of-legends-logo.png">
-
+    <div class="rules">
+      <h1>Déroulement des tournois</h1>
+      <h2>Introduction</h2>
+      <span>
+        Le tournoi de League of Legends du Poly Gaming Day se déroule en deux phases distinctes. Une première <b>phase de qualification en ligne</b>, puis une journée de <b>tournoi en présentiel</b>. Les règles du <a href="reglement" class="link">règlement général</a> s’appliquent au tournoi. Un non-respect du règlement du tournoi pourra entraîner
+        une disqualification de l'équipe. Les billets acheté vous donne accès à l'événement.
+      </span>
+      <h2>Phase de poule</h2>
+      <span>
+        La phase qualificative se déroulera le <b>samedi 14 mars</b> et le <b>dimanche 15 mars</b> en distanciel. Les matchs seront annoncés dans un canal <a href="https://discord.gg/PMNFaNG" class="link" target="_blank">Discord <i class="fa fa-sm fa-external-link"></i></a> dédié. Les matchs se déroulent sous forme de <b>Système Suisse</b>. Les
+        matchs se dérouleront en <b>BO3</b>. Les quatre meilleures équipes à l’issue de cette phase préliminaire se qualifient pour le tournoi en présentiel le <b>samedi 21 mars</b>. Cette phase se joue en deux manches gagnantes (BO3). <b>Si vous perdez deux matchs, vous êtes éliminés du tournoi</b>. Pour chaque match, des codes de tournoi seront
+        fournis sur Discord. Si un joueur a un problème pour se connecter, merci de suivre ce <a href="https://www.youtu.be/ZT6POWVww7A" target="_blank" class="link">tuto de OUAT TV&nbsp;<i class="fa fa-sm fa-external-link"></i></a> ou de contacter un organisateur.
+      </span>
+      <h2>Phase finale</h2>
+      <span> La phase finale se déroulera le <strong>samedi 15 mars</strong> en présentiel. Les matchs se dérouleront sous forme <strong>d'arbre de tournoi</strong> présenté comme ci-dessous : Les demi-finales se joueront en <strong>BO3</strong> et la finale en <strong>BO5</strong>. L'équipe gagnant la finale remporte le prix. </span>
+      <span> La phase finale se déroulera le <b>samedi 21 mars</b> en présentiel pour plus de détails merci de vous référer au planning des tournois. Les matchs se dérouleront sous forme d’<b>arbre de tournoi à double élimination</b> en <b>BO3</b> présenté comme ci-dessous <br /> </span>
+      <img src="static/images/pool-graph.png" alt="Graphe des phases de poule finales" />
+      <span>
+        <br />
+        Les matchs se déroulent en <b>Fearless</b> c'est-à-dire qu’un champion joué lors du BO3 ne pourra pas être rejoué. La liste d’indisponibilité est réinitialisée après la fin du BO3. Pour chaque match, des codes de tournoi seront fournis sur Discord. Si un joueur a un problème pour se connecter, merci de suivre ce
+        <a href="https://www.youtu.be/ZT6POWVww7A" target="_blank" class="link">tuto de OUAT TV&nbsp;<i class="fa fa-sm fa-external-link"></i></a> ou de contacter un organisateur.
+      </span>
     </div>
 
-  </div>
+    <section id="footer">
+      <a href="mentions-legales">Club Informatique Polytech Nancy © 2025</a>
+    </section>
 
-  <div class="rules">
-
-    <h1>Déroulement des tournois</h1>
-    <h2>Introduction</h2>
-    <span>
-      Les tournois Valorant et League of Legends des Poly Gaming Day se déroulent en deux phases distinctes. Une première
-      <strong>phase de qualification en ligne</strong>, puis une journée de <strong>tournoi en présentiel</strong>.<br>
-      Les règles du <a href="reglement" class="link">règlement général</a> s'appliquent au tournoi.<br>
-      Un non-respect du règlement ou au déroulement du tournoi pourra entraîner une disqualification de l'équipe.
-    </span>
-    <h2>Phase de poule</h2>
-    <span>
-      La phase qualificative se déroulera le <strong>samedi 8 mars</strong> en distanciel. Les matchs seront annoncés
-      dans un canal
-      <a href="https://discord.gg/S8A2F7nnSv" class="link" target="_blank">Discord <i
-          class="fa fa-sm fa-external-link"></i></a>
-      dédié. Les matchs se déroulent sous forme de <strong><a href="https://fr.wikipedia.org/wiki/Tournoi_toutes_rondes"
-          class="link" target="_blank">round robin <i class="fa fa-sm fa-external-link"></i></a></strong> en
-      <strong>BO1</strong>.<br>
-      Les quatres meilleures équipes à l'issue de cette phase préliminaire se qualifient pour le tournoi en présentiel.
-    </span>
-    <h2>Phase finale</h2>
-    <span>
-      La phase finale se déroulera le <strong>samedi 15 mars</strong> en présentiel. Les matchs se dérouleront sous
-      forme <strong>d'arbre de
-        tournoi</strong> présenté comme ci-dessous :
-
-      Les demi-finales se joueront en <strong>BO3</strong> et la finale en <strong>BO5</strong>.
-      L'équipe gagnant la finale remporte le prix.
-    </span>
-
-    <img src="static/images/pool-graph-1.png" alt="Graphe des phases de poule finales">
-
-  </div>
-
-  <section id="footer">
-    <a href="mentions-legales">Bureau de l'Info Polytech Nancy © 2025</a>
-  </section>
-
-  <script src="static/script.js"></script>
-
-</body>
-
+    <script src="static/script.js"></script>
+  </body>
 </html>

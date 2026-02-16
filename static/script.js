@@ -1,12 +1,14 @@
 let button = document.getElementById('scrollTopBtn');
 
 window.onscroll = function () {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    button.style.opacity = '1';
-    button.style.cursor = 'pointer';
-  } else {
-    button.style.opacity = '0';
-    button.style.cursor = 'default';
+  if (button) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      button.style.opacity = '1';
+      button.style.cursor = 'pointer';
+    } else {
+      button.style.opacity = '0';
+      button.style.cursor = 'default';
+    }
   }
 };
 
