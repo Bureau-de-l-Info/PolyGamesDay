@@ -642,7 +642,7 @@ section#staff,
   color: var(--blue);
   background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 2px no-repeat;
   display: inline-block;
-  padding-bottom: 0.2em;
+  /* padding-bottom: 0.2em; */ /* May be needed somehow but dont remember why */
   text-decoration: none;
   transition: 0.5s all;
 
