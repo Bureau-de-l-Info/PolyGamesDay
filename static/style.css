@@ -458,6 +458,10 @@ Retrieved 2026-02-16, License - CC BY-SA 4.0
   & #culture-actions > img {
     padding: 15px;
   }
+
+  & #cvec > img {
+    padding: 10px;
+  }
 }
 
 #sponsors-icons {
