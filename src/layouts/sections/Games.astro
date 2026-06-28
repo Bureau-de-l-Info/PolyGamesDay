@@ -1,0 +1,79 @@
+---
+import Section from "@components/Section.astro";
+---
+
+<Section>
+    <h2>Nos Jeux Libres</h2>
+
+    <div class="centered">
+        <img
+            loading="lazy"
+            alt="Fond Race System Nancy"
+            src="/images/raceSystemNancy.jpeg"
+        />
+
+        <div>
+            <h3>Simulateur de course et VR</h3>
+
+            <p>
+                Grâce à notre collaboration avec
+                <a href="https://nancy.racesystem.fr/">Race System Nancy</a>,
+                venez vivre une expérience de course ultra immersive.
+            </p>
+        </div>
+    </div>
+
+    <div class="centered">
+        <div>
+            <h3>Consoles rétro</h3>
+
+            <p>
+                De nombreux jeux et consoles rétro en libre accès, pour les
+                nostalgiques et les curieux qui n'ont jamais connu cette époque.
+            </p>
+        </div>
+
+        <img
+            loading="lazy"
+            alt="Fond jeux rétro"
+            src="/images/jeuxRetro.webp"
+        />
+    </div>
+</Section>
+
+<style>
+    .centered {
+        gap: 5vw;
+        margin-bottom: 10vh;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p,
+    img {
+        max-width: 30vw;
+        font-size: 1.125rem;
+    }
+
+    img {
+        border-radius: 6px;
+        filter: var(--shadow);
+    }
+
+    @media (max-width: 1100px) {
+        .centered {
+            flex-direction: column;
+        }
+
+        h2 + .centered {
+            flex-direction: column-reverse;
+        }
+
+        img,
+        p {
+            max-width: min(850px, 80vw);
+        }
+    }
+</style>

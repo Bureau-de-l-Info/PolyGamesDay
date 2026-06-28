@@ -1,0 +1,101 @@
+---
+import Card from "@components/Card.astro";
+import Section from "@components/Section.astro";
+---
+
+<Section className="card">
+    <div class="cards">
+        <h2>Nos Tournois</h2>
+
+        <div class="centered">
+            <Card title="League Of Legends" url="/">
+                <ul slot="format">
+                    <li>Qualifications en ronde suisse</li>
+                    <li>8 équipes s'affrontent pour 4 qualifications</li>
+                    <li>Phase finale en double élimination Fearless</li>
+                </ul>
+                <ul slot="schedule">
+                    <li>Qualification en distanciel les 14 et 15 Mars</li>
+                    <li>Phase finale en présentiel le 21 Mars</li>
+                    <li>Même déroulé que le tournoi Smash</li>
+                </ul>
+                <ul slot="additional">
+                    <li>
+                        Lien du <a href="/league-of-legends">règlement</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=ZT6POWVww7A"
+                            >Tutoriel</a
+                        > en cas de problème de connexion
+                    </li>
+                </ul>
+            </Card>
+
+            <Card title="Smash Ultimate" url="/">
+                <ul slot="format">
+                    <li>Aucune qualification</li>
+                    <li>Phase finale en doublé élimination</li>
+                    <li>BO3 puis BO5 à partir du top 8</li>
+                </ul>
+                <ul slot="schedule">
+                    <li>Mise en place à partir 9h</li>
+                    <li>Matchs entre 10h et 20h</li>
+                    <li>Pause de 12h à 13h</li>
+                    <li>Remise des prix à 20h</li>
+                </ul>
+                <ul slot="additional">
+                    <li>
+                        Lien du
+                        <a href="/smash-ultimate">règlement</a>
+                    </li>
+                    <li>Les règles sont celles du Smash Grand Est</li>
+                </ul>
+            </Card>
+
+            <Card title="Clash Royale" url="/">
+                <ul slot="format">
+                    <li>Aucune qualification</li>
+                    <li>Phase finale en doublé élimination</li>
+                    <li>Tous les matchs sont en BO3</li>
+                </ul>
+                <ul slot="schedule">
+                    <li>Mise en place à partir 9h</li>
+                    <li>Matchs entre 10h et 15h</li>
+                    <li>Pause de 12h à 13h</li>
+                    <li>Remise des prix à 15h</li>
+                </ul>
+                <ul slot="additional">
+                    <li>
+                        Lien du
+                        <a href="/clash-royale">règlement</a>
+                    </li>
+                    <li>Clan dédié au tournoi</li>
+                </ul>
+            </Card>
+        </div>
+    </div>
+</Section>
+
+<style>
+    .cards {
+        margin: 2.5vh;
+        border-radius: 12px;
+        padding: 10vh 10vw 10vh 10vw;
+        background-color: var(--accent-color);
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    .centered {
+        gap: 2.5vw;
+    }
+
+    @media (max-width: 1250px) {
+        .centered {
+            gap: 5vh;
+            flex-direction: column;
+        }
+    }
+</style>

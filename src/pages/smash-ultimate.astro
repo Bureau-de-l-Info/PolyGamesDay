@@ -1,0 +1,134 @@
+---
+import TimeSlot from "@components/TimeSlot.astro";
+import Container from "@layouts/Container.astro";
+---
+
+<Container
+    title="Tournoi Smash Ultimate"
+    description="Tous les détails sur le tournoi Smash Ultimate du Poly Gaming Day"
+>
+    <div>
+        <h2>Introduction</h2>
+
+        <p>
+            Le tournoi de Super Smash Bros Ultimate du Poly Gaming Day se
+            déroule tout au long du <b>Samedi 21 Mars</b> où le
+            <a href="reglement-general">règlement général</a>
+            s'applique. Un non-respect du règlement ou au déroulement du tournoi pourra
+            entraîner une disqualification de l'équipe.
+        </p>
+    </div>
+
+    <div>
+        <h2>Déroulement</h2>
+
+        <p>
+            Tous les matchs se jouent en deux manches gagnantes (BO3) puis en
+            trois manches gagnantes (BO5) à partir du top 8. Les joueurs
+            évolueront dans un arbre à double élimination comme celui-ci par
+            exemple :
+            <img
+                loading="lazy"
+                alt="Arbre en double élimination"
+                src="/images/doubleElimination.webp"
+            />
+        </p>
+    </div>
+
+    <div>
+        <h2>Planning en présentiel</h2>
+
+        <TimeSlot timespan="9h - 10h" description="Mise en place" />
+        <TimeSlot timespan="10h - 12h" description="Début des matchs" />
+        <TimeSlot
+            timespan="12h - 13h"
+            description="Pause du midi, restauration sur place"
+        />
+        <TimeSlot timespan="13h - 20h" description="Suite et fin des matchs" />
+        <TimeSlot timespan="20h - 20h30" description="Remise des prix" />
+    </div>
+
+    <div>
+        <h2>Code de conduite et comportements prohibés</h2>
+
+        <ul>
+            <li>
+                En cas de retard ou d'absence, vous serez disqualifié 5 minutes
+                après avoir été appelé. Prévenez les TOs sur discord dans ces
+                cas là
+            </li>
+            <li>
+                En cas de problème quelconque, référez vous à un organisateur
+            </li>
+            <li>
+                Les joueurs doivent suivre toutes les instructions des
+                organisateurs
+            </li>
+            <li>Tout manque de respect est répréhensible</li>
+            <li>
+                À la fin des matchs, vous irez vous même à la table des
+                organisateurs pour donner les résultats.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Règles spécifiques</h2>
+
+        <p>
+            Les règles appliquées sont celles utilisées par <b
+                >Smash Grand EST</b
+            > :
+        </p>
+        <ul>
+            <li>Le jeu doit être en anglais</li>
+            <li>
+                3 stocks 7 minutes, sans items ni hazards, avec le reste des
+                options définies par défaut
+            </li>
+            <li>
+                Pause désactivée (si un joueur l'active par mégarde, son
+                adversaire peut exiger qu'il suicide une stock)
+            </li>
+        </ul>
+
+        <p>
+            Le tournoi utilisera le ruleset unifié européen pour la <b
+                >stage list</b
+            > :
+        </p>
+        <ul>
+            <li>Battlefield</li>
+            <li>Small Battlefield</li>
+            <li>Final Destination</li>
+            <li>Yoshi’s Story</li>
+            <li>Hollow Bastion</li>
+            <li>Pokemon Stadium 2</li>
+            <li>Smashville</li>
+            <li>Town & City</li>
+            <li>Kalos Pokemon League</li>
+        </ul>
+
+        <p>Pour le <b>premier affrontement d'un BO</b> :</p>
+        <ol>
+            <li>Les personnages sont annoncés en même temps ;</li>
+            <li>Pierre Feuille Ciseau entre les deux joueurs ;</li>
+            <li>Le gagnant bannit 3 stages ;</li>
+            <li>Le perdant laisse 2 stages ;</li>
+            <li>Le gagnant choisit la map.</li>
+        </ol>
+
+        <p>Pour les <b>affrontement suivant</b> :</p>
+        <ol>
+            <li>Le gagnant annonce son personnage en premier ;</li>
+            <li>Le perdant annonce ensuite son personnage ;</li>
+            <li>Le gagnant bannit 3 stages ;</li>
+            <li>Le perdant choisit le stage ;</li>
+            <li>
+                Si les deux joueurs sont d'accord, ils peuvent jouer sur
+                n'importe quel stage autorisé
+                <div class=""></div>
+            </li>
+        </ol>
+    </div>
+</Container>

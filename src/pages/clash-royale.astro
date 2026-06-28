@@ -1,0 +1,54 @@
+---
+import TimeSlot from "@components/TimeSlot.astro";
+import Container from "@layouts/Container.astro";
+---
+
+<Container
+    title="Tournoi Clash Royale"
+    description="Tous les détails sur le tournoi Clash Royale du Poly Gaming Day"
+>
+    <div>
+        <h2>Introduction</h2>
+
+        <p>
+            Le tournoi de Clash Royal du Poly Gaming Day se déroule sur la
+            matinée du <b>Samedi 21 Mars</b> où le
+            <a href="reglement-general">règlement général</a>
+            s'applique. Un non-respect du règlement ou au déroulement du tournoi pourra
+            entraîner une disqualification de l'équipe.
+        </p>
+    </div>
+
+    <div>
+        <h2>Déroulement</h2>
+
+        <p>
+            Tous les matchs se jouent en deux manches gagnantes (BO3) et les
+            joueurs évolueront dans un arbre à double élimination comme celui-ci
+            par exemple :
+            <img
+                loading="lazy"
+                alt="Arbre en double élimination"
+                src="/images/doubleElimination.webp"
+            />
+        </p>
+        <p>
+            Afin de faciliter le déroulement des matchs, tous les joueurs seront
+            invités à rejoindre un clan et un serveur discord créés pour
+            faciliter le déroulement des matchs.
+        </p>
+    </div>
+
+    <div>
+        <h2>Planning en présentiel</h2>
+
+        <TimeSlot timespan="9h - 10h" description="Mise en place" />
+        <TimeSlot timespan="10h - 12h" description="Début des matchs" />
+        <TimeSlot
+            timespan="12h - 13h"
+            description="Pause du midi, restauration sur place"
+        />
+        <TimeSlot timespan="13h - 15h" description="Suite et fin des matchs" />
+        <TimeSlot timespan="15h - 15h30" description="Remise des prix" />
+    </div>
+</Container>

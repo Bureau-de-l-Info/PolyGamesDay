@@ -1,0 +1,24 @@
+---
+import Page from "@layouts/Page.astro";
+import Footer from "@layouts/Footer.astro";
+import About from "@layouts/sections/About.astro";
+import Hero from "@layouts/sections/Hero.astro";
+import Tournaments from "@layouts/sections/Tournaments.astro";
+import Games from "@layouts/sections/Games.astro";
+import Sponsors from "@layouts/sections/Sponsors.astro";
+import Team from "@layouts/sections/Team.astro";
+---
+
+<Page
+    title="Accueil"
+    description="La LAN multi-gaming créée par des étudiants pour des étudiants.
+                 Que ce soit pour s'amuser ou pour try-hard, vient jouer !"
+>
+    <Hero />
+    <About />
+    <Tournaments />
+    <Games />
+    <Sponsors />
+    <Team />
+    <Footer />
+</Page>

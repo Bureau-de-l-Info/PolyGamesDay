@@ -1,0 +1,114 @@
+---
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <title>Poly Gaming Day - {title}</title>
+        <meta name="description" content={description} />
+        <meta name="theme-color" content="#cb3f57" data-react-helmet="true" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Poly Gaming Day" />
+        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:description" content={description} />
+
+        <meta
+            name="keywords"
+            content="PGD,Polytech,Nancy,Jeux vidéo,LAN,E-Sport,Tournoi,Poly Gaming Day"
+        />
+
+        <link
+            rel="preload"
+            href="/fonts/quartzo.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/google-sans-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+
+<style>
+    :root {
+        --accent-color: #cb3f57;
+        --hover-color: #442222;
+        --alt-color: rgb(243 244 246);
+        --shadow: drop-shadow(5px 10px 10px #00000033);
+
+        --spacing: 4px;
+        --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+
+        --content-family: "Google Sans", sans-serif;
+        --title-family: "Quartzo", sans-serif;
+    }
+
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: var(--content-family);
+    }
+
+    :global(h1, h2, h3, h4) {
+        font-weight: bold;
+    }
+
+    :global(a) {
+        color: var(--accent-color);
+        transition: color 150ms var(--ease-snappy);
+    }
+
+    :global(a:hover) {
+        color: var(--hover-color);
+    }
+
+    :global(.centered) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    :global(.column) {
+        width: min(850px, 80vw);
+    }
+
+    @font-face {
+        font-family: "Quartzo";
+        font-display: swap;
+        src: url("/fonts/quartzo.ttf");
+    }
+
+    @font-face {
+        font-family: "Google Sans";
+        font-weight: 400;
+        font-display: swap;
+        src: url("/fonts/google-sans-400.woff2");
+    }
+
+    @font-face {
+        font-family: "Google Sans";
+        font-weight: 700;
+        font-display: swap;
+        src: url("/fonts/google-sans-700.woff2");
+    }
+</style>

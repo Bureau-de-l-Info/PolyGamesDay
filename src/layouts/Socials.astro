@@ -1,0 +1,64 @@
+---
+import Icon from "@components/Icon.astro";
+import SocialsItem from "@components/SocialsItem.astro";
+---
+
+<div id="socials">
+    <div class="centered">
+        <SocialsItem
+            label="Notre Instagram"
+            icon="instagram"
+            url="https://www.instagram.com/club_info_polytech_nancy/"
+        />
+        <SocialsItem
+            label="Notre Facebook"
+            icon="facebook"
+            url="https://www.facebook.com/ClubInfoPolytechNancy"
+        />
+        <SocialsItem
+            label="Notre Discord"
+            icon="discord"
+            url="https://www.discord.gg/PMNFaNG"
+        />
+    </div>
+
+    <p class="centered"><Icon name="share-nodes" /></p>
+</div>
+
+<style>
+    #socials {
+        position: fixed;
+        right: calc(var(--spacing) * 5);
+        bottom: calc(var(--spacing) * 5);
+
+        transition: all 0.15s var(--ease-snappy);
+    }
+
+    .centered {
+        gap: 5px;
+        margin-bottom: 5px;
+        flex-direction: column;
+    }
+
+    p {
+        margin: 0 auto;
+        width: calc(var(--spacing) * 14);
+        height: calc(var(--spacing) * 14);
+        color: #fff;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        filter: var(--shadow);
+        background-color: var(--accent-color);
+    }
+
+    @media (max-width: 700px) {
+        #socials {
+            display: flex;
+        }
+
+        .centered {
+            margin: 0 5px 0 0;
+            flex-direction: row;
+        }
+    }
+</style>

@@ -1,0 +1,22 @@
+---
+import Icon, { type IconList } from "./Icon.astro";
+
+interface Props {
+    label: string;
+    url: string;
+    icon: IconList;
+}
+
+const { label, url, icon } = Astro.props;
+---
+
+<a class="link" aria-label={label} target="_blank" href={url}
+    ><Icon name={icon} /></a
+>
+
+<style>
+    a {
+        font-size: 2rem;
+        text-decoration: none;
+    }
+</style>

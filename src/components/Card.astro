@@ -1,0 +1,93 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+    title: string;
+    url: string;
+}
+
+const { title, url } = Astro.props;
+---
+
+<div class="card">
+    <h3>{title}</h3>
+
+    <div>
+        <h4><Icon name="book" /> Format</h4>
+        <slot name="format" />
+    </div>
+
+    <div>
+        <h4><Icon name="calendar" /> Déroulé</h4>
+        <slot name="schedule" />
+    </div>
+
+    <div>
+        <h4><Icon name="question" /> Compléments</h4>
+        <slot name="additional" />
+    </div>
+
+    <a href={url}>S'inscrire</a>
+</div>
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 25vw;
+        height: 60vh;
+        padding: 1.25vw;
+        filter: var(--shadow);
+        min-height: fit-content;
+
+        border-radius: 6px;
+        background-color: #fff;
+    }
+
+    h3 {
+        margin: 2.5vh 0 0 0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    h4 {
+        margin: 0 0 7px 0;
+        font-size: 1.125rem;
+    }
+
+    a {
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 6px;
+        padding: calc(var(--spacing) * 3.5);
+        background-color: var(--accent-color);
+        transition: background-color 200ms var(--ease-snappy);
+
+        &:hover {
+            background-color: var(--hover-color);
+        }
+    }
+
+    @media (max-width: 1250px) {
+        .card {
+            width: 50vw;
+        }
+
+        div {
+            margin: 0 1vw;
+        }
+    }
+
+    @media (max-width: 750px) {
+        .card {
+            gap: 2.5vh;
+            width: 70vw;
+            padding: 2.5vw;
+            height: fit-content;
+        }
+    }
+</style>

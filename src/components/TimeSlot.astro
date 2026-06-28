@@ -1,0 +1,68 @@
+---
+interface Props {
+    timespan: string;
+    description: string;
+}
+
+const { timespan, description } = Astro.props;
+---
+
+<div>
+    <span class="time">{timespan}</span>
+    <span class="dash">ㅡ</span>
+    <span class="desc">{description}</span>
+</div>
+
+<style>
+    div {
+        display: flex;
+        align-items: center;
+        margin: calc(var(--spacing) * 2) 0;
+        gap: calc(var(--spacing) * 2);
+    }
+
+    span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desc {
+        justify-content: start;
+    }
+
+    .time,
+    .desc {
+        border-radius: 6px;
+        padding: calc(var(--spacing) * 3);
+    }
+
+    .time {
+        color: #fff;
+        width: 90px;
+        text-align: center;
+        background-color: var(--accent-color);
+    }
+
+    .desc {
+        flex-grow: 1;
+        background-color: var(--alt-color);
+    }
+
+    @media (max-width: 550px) {
+        div {
+            flex-direction: row;
+            align-items: stretch;
+            gap: calc(var(--spacing) * 1);
+        }
+
+        .time {
+            width: 50px;
+            flex-shrink: 0;
+        }
+
+        .desc {
+            flex: 1 1 auto;
+        }
+    }
+</style>

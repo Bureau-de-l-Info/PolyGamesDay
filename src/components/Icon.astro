@@ -1,0 +1,54 @@
+---
+export type IconList =
+    "book" | "share-nodes" | "calendar" | "question" | "instagram" | "facebook" | "discord";
+
+interface Props {
+    name: IconList;
+}
+
+const { name } = Astro.props;
+---
+
+<i class={name}></i>
+
+<style>
+    @font-face {
+        font-family: "Font Awesome";
+        font-display: swap;
+        src: url("/fonts/font-awesome.woff2");
+    }
+
+    i {
+        font-style: normal;
+        font-weight: normal;
+        font-family: "Font Awesome";
+
+        &.book::before {
+            content: "\f02d";
+        }
+
+        &.share-nodes::before {
+            content: "\f1e0";
+        }
+
+        &.calendar::before {
+            content: "\f133";
+        }
+
+        &.question::before {
+            content: "\f059";
+        }
+
+        &.instagram::before {
+            content: "\e055";
+        }
+
+        &.facebook::before {
+            content: "\f09a";
+        }
+
+        &.discord::before {
+            content: "\f392";
+        }
+    }
+</style>

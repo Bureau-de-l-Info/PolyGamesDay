@@ -1,0 +1,137 @@
+---
+import MarqueeItem from "@components/MarqueeItem.astro";
+import Section from "@components/Section.astro";
+---
+
+<Section>
+    <div class="marquee">
+        <h2>Nos Sponsors</h2>
+
+        <div class="track">
+            <div class="group">
+                <MarqueeItem
+                    label="La Feinte de l'Ours"
+                    image="/images/laFeinteDeLours.webp"
+                    link="https://lafeintedelours.fr/"
+                />
+                <MarqueeItem
+                    label="Smash Lorraine"
+                    image="/images/smashLorraine.webp"
+                    link="https://www.instagram.com/smashlorraine/"
+                />
+                <MarqueeItem
+                    label="La Faille"
+                    image="/images/laFaille.webp"
+                    link="https://www.lafaille-nancy.fr/fr/"
+                />
+                <MarqueeItem
+                    label="La Caverne du Gobelin"
+                    image="/images/laCaverneDuGobelin.webp"
+                    link="https://cavernedugobelin.com/"
+                />
+                <MarqueeItem
+                    label="BeQuiet"
+                    image="/images/beQuiet.webp"
+                    link="https://www.bequiet.com/"
+                />
+                <MarqueeItem
+                    label="Polytech Nancy"
+                    image="/images/polytechNancy.webp"
+                    link="https://polytech-nancy.univ-lorraine.fr/"
+                />
+                <MarqueeItem
+                    label="Grand Nancy"
+                    image="/images/grandNancy.webp"
+                    link="https://www.grandnancy.eu/"
+                />
+                <MarqueeItem
+                    label="FSDIE"
+                    image="/images/fsdie.webp"
+                    link="https://www.univ-lorraine.fr/la-vie-a-luniversite-de-lorraine/initiatives-etudiantes/"
+                />
+                <MarqueeItem
+                    label="Université de Lorraine"
+                    image="/images/univLorraine.webp"
+                    link="https://www.univ-lorraine.fr/"
+                />
+                <MarqueeItem
+                    label="Crous Lorraine"
+                    image="/images/crousLorraine.webp"
+                    link="https://www.crous-lorraine.fr/"
+                />
+                <MarqueeItem
+                    label="Culture Action"
+                    image="/images/cultureAction.webp"
+                    link="https://www.etudiant.gouv.fr/fr/culture-actions-le-dispositif-des-crous-de-soutien-aux-initiatives-etudiantes-1771"
+                />
+            </div>
+        </div>
+    </div>
+</Section>
+
+<script>
+    window.addEventListener("load", () => {
+        const group = document.querySelector(".group");
+        if (
+            group === null ||
+            group.parentNode === null ||
+            group.parentElement === null
+        )
+            return;
+
+        const clone = group.cloneNode(true);
+        group.parentNode.insertBefore(clone, group.nextSibling);
+
+        group.parentElement.style.setProperty(
+            "--shift",
+            `-${group.getBoundingClientRect().width}px`,
+        );
+    });
+</script>
+
+<style>
+    .marquee {
+        padding: 5vh 0;
+        max-width: 100%;
+        overflow: hidden;
+        background-color: var(--alt-color);
+    }
+
+    .track,
+    .group {
+        gap: 2.5vw;
+        display: flex;
+    }
+
+    .track {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        animation: scroll 120s linear infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    .group {
+        flex-shrink: 0;
+        gap: 2.5vw;
+        display: flex;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(var(--shift) - 2.5vh));
+        }
+    }
+
+    @media (max-width: 750px) {
+        .track {
+            animation-duration: 60s;
+        }
+    }
+</style>

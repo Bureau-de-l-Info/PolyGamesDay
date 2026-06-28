@@ -1,0 +1,93 @@
+---
+import TimeSlot from "@components/TimeSlot.astro";
+import Container from "@layouts/Container.astro";
+---
+
+<Container
+    title="Tournoi League of Legends"
+    description="Tous les détails sur le tournoi league of legends du Poly Gaming Day"
+>
+    <div>
+        <h2>Introduction</h2>
+
+        <p>
+            Il est important de noter que le
+
+            <a href="reglement-general">règlement général</a>
+            s'applique aux deux phases. Un non-respect de ces règles peut mener jusqu'à
+            une disqualification de l'équipe. Les billets achetés vous donnent accès
+            aux deux phases et aux ateliers du PGD.
+        </p>
+        <p>
+            Le tournoi League of Legends se passe en deux phases : une
+            qualification en ligne puis une journée de tournoi en présentiel.
+            Les qualifications auront lieu les <b>Samedi 14 Mars</b> et
+            <b>Dimanche 15 Mars</b> tandis que la phase finale aura lieu le
+            <b>Samedi 21 Mars à Polytech Nancy</b>.
+        </p>
+    </div>
+
+    <div>
+        <h2>Phase de poule</h2>
+        <p>
+            Comme mentionné précédemment, la phase qualificative aura lieu les
+            <b>Samedi 14 Mars</b> et <b>Dimanche 15 Mars</b>. Huit (8) équipes
+            évolueront dans un
+            <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_suisse"
+                >système suisse</a
+            >
+            à partir duquel 4 équipes se qualifieront. Tous les matchs seront annoncés
+            sur le
+            <a href="https://discord.gg/NP9tWjmcUT"
+                >Discord du Bureau De l'Informatique</a
+            >
+            et se jouent en deux manches gagnantes (BO3).
+        </p>
+        <p>
+            Le tournoi adopte un système de rencontres équilibrées : chaque
+            équipe affronte des adversaires affichant un bilan identique. La
+            qualification pour la phase suivante est acquise dès l’obtention de
+            deux victoires, tandis que deux défaites entraînent l'élimination
+            immédiate de la compétition. Pour chaque match, des codes de tournoi
+            seront fournis sur Discord. Si un joueur a un problème pour se
+            connecter, merci de suivre ce
+            <a href="https://youtu.be/ZT6POWVww7A">tuto de OUAT TV</a> ou de contacter
+            un organisateur.
+        </p>
+    </div>
+
+    <div>
+        <h2>Phase finale</h2>
+        <p>
+            La phase finale se déroulera le <b>Samedi 21 mars en présentiel</b>.
+            Les matchs se déroulent en BO3 Fearless, c'est-à-dire qu’un champion
+            joué lors du BO3 ne pourra pas être rejoué. La liste
+            d’indisponibilité est réinitialisée après la fin du BO3 et des codes
+            de tournoi seront fournis sur Discord. Si un joueur a un problème
+            pour se connecter, merci de suivre ce
+            <a href="https://youtu.be/ZT6POWVww7A">tuto de OUAT TV</a> ou de contacter
+            un organisateur.
+        </p>
+        <p>
+            Voici l'arbre de double élimination utilisé lors du tournoi :
+            <img
+                loading="lazy"
+                alt="Arbre en double élimination"
+                src="/images/doubleElimination.webp"
+            />
+        </p>
+    </div>
+
+    <div>
+        <h2>Planning en présentiel</h2>
+
+        <TimeSlot timespan="9h - 10h" description="Mise en place" />
+        <TimeSlot timespan="10h - 12h" description="Début des matchs" />
+        <TimeSlot
+            timespan="12h - 13h"
+            description="Pause du midi, restauration sur place"
+        />
+        <TimeSlot timespan="13h - 20h" description="Suite et fin des matchs" />
+        <TimeSlot timespan="20h - 20h30" description="Remise des prix" />
+    </div>
+</Container>

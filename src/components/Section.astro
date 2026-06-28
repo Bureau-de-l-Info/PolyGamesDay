@@ -1,0 +1,33 @@
+---
+interface Props {
+    className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section class={className}>
+    <slot />
+</section>
+
+<style>
+    section {
+        margin: 20vh auto;
+    }
+
+    :global(section h2) {
+        margin: 0;
+        font-size: 3.75rem;
+        text-align: center;
+        filter: var(--shadow);
+        color: var(--accent-color);
+        font-family: var(--title-family);
+        margin-bottom: calc(var(--spacing) * 15);
+    }
+
+    @media (max-width: 700px) {
+        :global(section h2) {
+            font-size: 3rem;
+        }
+    }
+</style>

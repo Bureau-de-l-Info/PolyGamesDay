@@ -1,0 +1,69 @@
+---
+import Page from "@layouts/Page.astro";
+import Footer from "@layouts/Footer.astro";
+
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Page {title} {description}>
+    <div class="container">
+        <a class="link" href="/">Revenir sur la<br />page principale</a>
+
+        <main class="column">
+            <h1>{title}</h1>
+            <slot />
+        </main>
+
+        <Footer />
+    </div>
+</Page>
+
+<style>
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1 0 auto;
+        margin: 10vh auto;
+        line-height: 1.3rem;
+    }
+
+    h1 {
+        filter: var(--shadow);
+        color: var(--accent-color);
+        font-size: 3.5rem;
+        text-align: center;
+        font-family: var(--title-family);
+        margin-bottom: calc(var(--spacing) * 20);
+        line-height: 4rem;
+    }
+
+    :global(main h2) {
+        margin-top: calc(var(--spacing) * 15);
+    }
+
+    :global(main a) {
+        font-weight: bold;
+    }
+
+    :global(main img) {
+        max-height: 30vh;
+        max-width: 80vw;
+        display: block;
+        margin: 0 auto 2.5vh auto;
+    }
+
+    a {
+        z-index: 1;
+        position: fixed;
+        margin: calc(var(--spacing) * 3);
+    }
+</style>

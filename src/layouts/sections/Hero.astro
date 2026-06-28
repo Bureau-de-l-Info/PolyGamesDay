@@ -1,0 +1,86 @@
+---
+import Socials from "@layouts/Socials.astro";
+---
+
+<section class="centered">
+    <div>
+        <h1>
+            Poly<br />Gaming<br />Day
+        </h1>
+
+        <div id="cta">
+            <span class="button">21 Mars 2026</span>
+            <a href="/" class="button">S'inscrire au PGD</a>
+        </div>
+    </div>
+
+    <img alt="Logo BDI" src="/images/logo.png" />
+
+    <Socials />
+</section>
+
+<style>
+    section {
+        height: 95vh;
+        margin: 2.5vh;
+        padding: 0 5vw;
+        border-radius: 12px;
+        filter: var(--shadow);
+        justify-content: space-between;
+        background-image: url("/images/fond.webp");
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 10rem;
+        filter: var(--shadow);
+        color: var(--accent-color);
+        font-family: var(--title-family);
+    }
+
+    img {
+        width: 20vw;
+        margin-right: 10vw;
+    }
+
+    div > div {
+        display: flex;
+        filter: var(--shadow);
+    }
+
+    span,
+    a {
+        font-weight: bold;
+        padding: calc(var(--spacing) * 3.75);
+    }
+
+    span {
+        background-color: #fff;
+        color: var(--accent-color);
+        border-radius: 6px 0 0 6px;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0 6px 6px 0;
+        background-color: var(--accent-color);
+        transition: background-color 200ms var(--ease-snappy);
+
+        &:hover {
+            background-color: var(--hover-color);
+        }
+    }
+
+    @media (max-width: 800px) {
+        h1 {
+            font-size: 5.75rem;
+        }
+    }
+
+    @media (max-width: 1250px) {
+        img {
+            display: none;
+        }
+    }
+</style>
